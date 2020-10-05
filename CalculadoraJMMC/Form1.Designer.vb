@@ -23,7 +23,7 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.txtBoxResultado = New System.Windows.Forms.TextBox()
-        Me.btnNum0 = New System.Windows.Forms.Button()
+        Me.btnComa = New System.Windows.Forms.Button()
         Me.btnNum7 = New System.Windows.Forms.Button()
         Me.btnNum8 = New System.Windows.Forms.Button()
         Me.btnNum9 = New System.Windows.Forms.Button()
@@ -40,6 +40,8 @@ Partial Class Form1
         Me.btnMas = New System.Windows.Forms.Button()
         Me.btnCE = New System.Windows.Forms.Button()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
+        Me.btnNum0 = New System.Windows.Forms.Button()
+        Me.btnSigno = New System.Windows.Forms.Button()
         Me.btnIgual = New System.Windows.Forms.Button()
         Me.btnC = New System.Windows.Forms.Button()
         Me.TableLayoutPanel1.SuspendLayout()
@@ -58,18 +60,17 @@ Partial Class Form1
         Me.txtBoxResultado.Text = "0"
         Me.txtBoxResultado.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
-        'btnNum0
+        'btnComa
         '
-        Me.btnNum0.AutoSize = True
-        Me.TableLayoutPanel1.SetColumnSpan(Me.btnNum0, 3)
-        Me.btnNum0.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.btnNum0.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnNum0.Location = New System.Drawing.Point(3, 240)
-        Me.btnNum0.Name = "btnNum0"
-        Me.btnNum0.Size = New System.Drawing.Size(231, 75)
-        Me.btnNum0.TabIndex = 13
-        Me.btnNum0.Text = "0"
-        Me.btnNum0.UseVisualStyleBackColor = True
+        Me.btnComa.AutoSize = True
+        Me.btnComa.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.btnComa.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnComa.Location = New System.Drawing.Point(161, 240)
+        Me.btnComa.Name = "btnComa"
+        Me.btnComa.Size = New System.Drawing.Size(73, 75)
+        Me.btnComa.TabIndex = 13
+        Me.btnComa.Text = ","
+        Me.btnComa.UseVisualStyleBackColor = True
         '
         'btnNum7
         '
@@ -244,6 +245,8 @@ Partial Class Form1
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
+        Me.TableLayoutPanel1.Controls.Add(Me.btnNum0, 0, 3)
+        Me.TableLayoutPanel1.Controls.Add(Me.btnSigno, 0, 3)
         Me.TableLayoutPanel1.Controls.Add(Me.btnIgual, 4, 3)
         Me.TableLayoutPanel1.Controls.Add(Me.btnC, 4, 1)
         Me.TableLayoutPanel1.Controls.Add(Me.btnCE, 4, 2)
@@ -261,7 +264,7 @@ Partial Class Form1
         Me.TableLayoutPanel1.Controls.Add(Me.btnNum9, 2, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.btnNum8, 1, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.btnNum7, 0, 0)
-        Me.TableLayoutPanel1.Controls.Add(Me.btnNum0, 0, 3)
+        Me.TableLayoutPanel1.Controls.Add(Me.btnComa, 1, 3)
         Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 63)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 4
@@ -272,6 +275,30 @@ Partial Class Form1
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
         Me.TableLayoutPanel1.Size = New System.Drawing.Size(397, 318)
         Me.TableLayoutPanel1.TabIndex = 0
+        '
+        'btnNum0
+        '
+        Me.btnNum0.AutoSize = True
+        Me.btnNum0.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.btnNum0.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnNum0.Location = New System.Drawing.Point(82, 240)
+        Me.btnNum0.Name = "btnNum0"
+        Me.btnNum0.Size = New System.Drawing.Size(73, 75)
+        Me.btnNum0.TabIndex = 20
+        Me.btnNum0.Text = "0"
+        Me.btnNum0.UseVisualStyleBackColor = True
+        '
+        'btnSigno
+        '
+        Me.btnSigno.AutoSize = True
+        Me.btnSigno.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.btnSigno.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSigno.Location = New System.Drawing.Point(3, 240)
+        Me.btnSigno.Name = "btnSigno"
+        Me.btnSigno.Size = New System.Drawing.Size(73, 75)
+        Me.btnSigno.TabIndex = 19
+        Me.btnSigno.Text = "+/-"
+        Me.btnSigno.UseVisualStyleBackColor = True
         '
         'btnIgual
         '
@@ -312,7 +339,7 @@ Partial Class Form1
 
     End Sub
     Friend WithEvents txtBoxResultado As TextBox
-    Friend WithEvents btnNum0 As Button
+    Friend WithEvents btnComa As Button
     Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
     Friend WithEvents btnIgual As Button
     Friend WithEvents btnC As Button
@@ -331,4 +358,6 @@ Partial Class Form1
     Friend WithEvents btnNum9 As Button
     Friend WithEvents btnNum8 As Button
     Friend WithEvents btnNum7 As Button
+    Friend WithEvents btnNum0 As Button
+    Friend WithEvents btnSigno As Button
 End Class

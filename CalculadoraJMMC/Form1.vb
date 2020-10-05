@@ -21,7 +21,7 @@
         ' Con esto no añado más numero si ha superado el largo máximo, en este caso he puesto 16
         ' También realizo varias comprobaciones para no poner ceros a la izquierda
         If txtBoxResultado.Text.Length < maxLenght Then
-            If btnClicked.Text = btnNum0.Text Then
+            If btnClicked.Text = btnComa.Text Then
                 If txtBoxResultado.Text = "0" Or
                     txtBoxResultado.Text = "" Then
                     txtBoxResultado.Text = "0"
@@ -178,6 +178,18 @@
         End If
         txtBoxResultado.Text = ""
         limpiaPantalla = False
+
+    End Sub
+
+    Private Sub btnSigno_Click(sender As Object, e As EventArgs) Handles btnSigno.Click
+
+        If txtBoxResultado.Text <> "0" AndAlso
+            Not txtBoxResultado.Text.Contains("-") Then
+
+            txtBoxResultado.Text = "-" + txtBoxResultado.Text
+        Else
+            txtBoxResultado.Text = txtBoxResultado.Text.Replace("-", "")
+        End If
 
     End Sub
 End Class
