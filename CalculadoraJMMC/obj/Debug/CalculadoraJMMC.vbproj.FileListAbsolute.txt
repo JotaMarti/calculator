@@ -1,0 +1,11 @@
+C:\Drive\Work\Proyectos\VisualStudio2015\CalculadoraJMMC\CalculadoraJMMC\bin\Debug\CalculadoraJMMC.exe.config
+C:\Drive\Work\Proyectos\VisualStudio2015\CalculadoraJMMC\CalculadoraJMMC\bin\Debug\CalculadoraJMMC.exe
+C:\Drive\Work\Proyectos\VisualStudio2015\CalculadoraJMMC\CalculadoraJMMC\bin\Debug\CalculadoraJMMC.pdb
+C:\Drive\Work\Proyectos\VisualStudio2015\CalculadoraJMMC\CalculadoraJMMC\bin\Debug\CalculadoraJMMC.xml
+C:\Drive\Work\Proyectos\VisualStudio2015\CalculadoraJMMC\CalculadoraJMMC\obj\Debug\CalculadoraJMMC.vbprojResolveAssemblyReference.cache
+C:\Drive\Work\Proyectos\VisualStudio2015\CalculadoraJMMC\CalculadoraJMMC\obj\Debug\CalculadoraJMMC.Form1.resources
+C:\Drive\Work\Proyectos\VisualStudio2015\CalculadoraJMMC\CalculadoraJMMC\obj\Debug\CalculadoraJMMC.Resources.resources
+C:\Drive\Work\Proyectos\VisualStudio2015\CalculadoraJMMC\CalculadoraJMMC\obj\Debug\CalculadoraJMMC.vbproj.GenerateResource.Cache
+C:\Drive\Work\Proyectos\VisualStudio2015\CalculadoraJMMC\CalculadoraJMMC\obj\Debug\CalculadoraJMMC.exe
+C:\Drive\Work\Proyectos\VisualStudio2015\CalculadoraJMMC\CalculadoraJMMC\obj\Debug\CalculadoraJMMC.xml
+C:\Drive\Work\Proyectos\VisualStudio2015\CalculadoraJMMC\CalculadoraJMMC\obj\Debug\CalculadoraJMMC.pdb
