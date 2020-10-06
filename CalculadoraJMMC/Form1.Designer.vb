@@ -234,15 +234,17 @@ Partial Class Form1
         '
         'btnBorrar
         '
-        Me.btnBorrar.BackColor = System.Drawing.SystemColors.ControlDark
+        Me.btnBorrar.BackColor = System.Drawing.Color.Transparent
+        Me.btnBorrar.BackgroundImage = Global.CalculadoraJMMC.My.Resources.Resources.eliminar
+        Me.btnBorrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.btnBorrar.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.btnBorrar.FlatAppearance.BorderSize = 0
         Me.btnBorrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnBorrar.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnBorrar.Location = New System.Drawing.Point(319, 3)
         Me.btnBorrar.Name = "btnBorrar"
         Me.btnBorrar.Size = New System.Drawing.Size(75, 74)
         Me.btnBorrar.TabIndex = 14
-        Me.btnBorrar.Text = "<="
         Me.btnBorrar.UseVisualStyleBackColor = False
         '
         'btnMas
@@ -260,11 +262,11 @@ Partial Class Form1
         '
         'btnCE
         '
-        Me.btnCE.BackColor = System.Drawing.SystemColors.ControlDark
+        Me.btnCE.BackColor = System.Drawing.Color.FromArgb(CType(CType(243, Byte), Integer), CType(CType(67, Byte), Integer), CType(CType(54, Byte), Integer))
         Me.btnCE.Dock = System.Windows.Forms.DockStyle.Fill
         Me.btnCE.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnCE.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCE.Location = New System.Drawing.Point(319, 163)
+        Me.btnCE.Location = New System.Drawing.Point(319, 83)
         Me.btnCE.Name = "btnCE"
         Me.btnCE.Size = New System.Drawing.Size(75, 74)
         Me.btnCE.TabIndex = 16
@@ -279,13 +281,12 @@ Partial Class Form1
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
-        Me.TableLayoutPanel1.Controls.Add(Me.btnInversa, 2, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.btnPorcentaje, 0, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.btnNum0, 1, 4)
         Me.TableLayoutPanel1.Controls.Add(Me.btnSigno, 0, 4)
         Me.TableLayoutPanel1.Controls.Add(Me.btnIgual, 4, 3)
-        Me.TableLayoutPanel1.Controls.Add(Me.btnC, 4, 1)
-        Me.TableLayoutPanel1.Controls.Add(Me.btnCE, 4, 2)
+        Me.TableLayoutPanel1.Controls.Add(Me.btnC, 4, 2)
+        Me.TableLayoutPanel1.Controls.Add(Me.btnCE, 4, 1)
         Me.TableLayoutPanel1.Controls.Add(Me.btnMas, 3, 4)
         Me.TableLayoutPanel1.Controls.Add(Me.btnBorrar, 4, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.btnRest, 3, 3)
@@ -301,6 +302,7 @@ Partial Class Form1
         Me.TableLayoutPanel1.Controls.Add(Me.btnNum8, 1, 1)
         Me.TableLayoutPanel1.Controls.Add(Me.btnNum7, 0, 1)
         Me.TableLayoutPanel1.Controls.Add(Me.btnComa, 2, 4)
+        Me.TableLayoutPanel1.Controls.Add(Me.btnInversa, 2, 0)
         Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 63)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 5
@@ -315,28 +317,28 @@ Partial Class Form1
         '
         'btnInversa
         '
-        Me.btnInversa.BackColor = System.Drawing.SystemColors.ControlDark
+        Me.btnInversa.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.btnInversa.BackColor = System.Drawing.Color.Transparent
         Me.TableLayoutPanel1.SetColumnSpan(Me.btnInversa, 2)
-        Me.btnInversa.Dock = System.Windows.Forms.DockStyle.Fill
         Me.btnInversa.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnInversa.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnInversa.Location = New System.Drawing.Point(161, 3)
+        Me.btnInversa.Location = New System.Drawing.Point(161, 14)
         Me.btnInversa.Name = "btnInversa"
-        Me.btnInversa.Size = New System.Drawing.Size(152, 74)
+        Me.btnInversa.Size = New System.Drawing.Size(152, 51)
         Me.btnInversa.TabIndex = 22
         Me.btnInversa.Text = "1/x"
         Me.btnInversa.UseVisualStyleBackColor = False
         '
         'btnPorcentaje
         '
-        Me.btnPorcentaje.BackColor = System.Drawing.SystemColors.ControlDark
+        Me.btnPorcentaje.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.btnPorcentaje.BackColor = System.Drawing.Color.Transparent
         Me.TableLayoutPanel1.SetColumnSpan(Me.btnPorcentaje, 2)
-        Me.btnPorcentaje.Dock = System.Windows.Forms.DockStyle.Fill
         Me.btnPorcentaje.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnPorcentaje.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnPorcentaje.Location = New System.Drawing.Point(3, 3)
+        Me.btnPorcentaje.Location = New System.Drawing.Point(3, 14)
         Me.btnPorcentaje.Name = "btnPorcentaje"
-        Me.btnPorcentaje.Size = New System.Drawing.Size(152, 74)
+        Me.btnPorcentaje.Size = New System.Drawing.Size(152, 51)
         Me.btnPorcentaje.TabIndex = 21
         Me.btnPorcentaje.Text = "%"
         Me.btnPorcentaje.UseVisualStyleBackColor = False
@@ -385,11 +387,11 @@ Partial Class Form1
         '
         'btnC
         '
-        Me.btnC.BackColor = System.Drawing.SystemColors.ControlDark
+        Me.btnC.BackColor = System.Drawing.Color.FromArgb(CType(CType(243, Byte), Integer), CType(CType(67, Byte), Integer), CType(CType(54, Byte), Integer))
         Me.btnC.Dock = System.Windows.Forms.DockStyle.Fill
         Me.btnC.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnC.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnC.Location = New System.Drawing.Point(319, 83)
+        Me.btnC.Location = New System.Drawing.Point(319, 163)
         Me.btnC.Name = "btnC"
         Me.btnC.Size = New System.Drawing.Size(75, 74)
         Me.btnC.TabIndex = 17

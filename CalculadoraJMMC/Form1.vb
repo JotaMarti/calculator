@@ -19,6 +19,7 @@
 
         btnClicked = TryCast(sender, Button)
 
+
         ' Con esto no añado más numero si ha superado el largo máximo, en este caso he puesto 16
         ' También realizo varias comprobaciones para no poner ceros a la izquierda
         If txtBoxResultado.Text.Length < maxLenght Then
