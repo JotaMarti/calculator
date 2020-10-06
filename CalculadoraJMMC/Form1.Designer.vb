@@ -65,179 +65,211 @@ Partial Class Form1
         'btnComa
         '
         Me.btnComa.AutoSize = True
+        Me.btnComa.BackColor = System.Drawing.SystemColors.ScrollBar
         Me.btnComa.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.btnComa.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnComa.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnComa.Location = New System.Drawing.Point(161, 323)
         Me.btnComa.Name = "btnComa"
         Me.btnComa.Size = New System.Drawing.Size(73, 74)
         Me.btnComa.TabIndex = 13
         Me.btnComa.Text = ","
-        Me.btnComa.UseVisualStyleBackColor = True
+        Me.btnComa.UseVisualStyleBackColor = False
         '
         'btnNum7
         '
+        Me.btnNum7.BackColor = System.Drawing.SystemColors.ScrollBar
         Me.btnNum7.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.btnNum7.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnNum7.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnNum7.Location = New System.Drawing.Point(3, 83)
         Me.btnNum7.Name = "btnNum7"
         Me.btnNum7.Size = New System.Drawing.Size(73, 74)
         Me.btnNum7.TabIndex = 0
         Me.btnNum7.Text = "7"
-        Me.btnNum7.UseVisualStyleBackColor = True
+        Me.btnNum7.UseVisualStyleBackColor = False
         '
         'btnNum8
         '
+        Me.btnNum8.BackColor = System.Drawing.SystemColors.ScrollBar
         Me.btnNum8.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.btnNum8.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnNum8.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnNum8.Location = New System.Drawing.Point(82, 83)
         Me.btnNum8.Name = "btnNum8"
         Me.btnNum8.Size = New System.Drawing.Size(73, 74)
         Me.btnNum8.TabIndex = 1
         Me.btnNum8.Text = "8"
-        Me.btnNum8.UseVisualStyleBackColor = True
+        Me.btnNum8.UseVisualStyleBackColor = False
         '
         'btnNum9
         '
+        Me.btnNum9.BackColor = System.Drawing.SystemColors.ScrollBar
         Me.btnNum9.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.btnNum9.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnNum9.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnNum9.Location = New System.Drawing.Point(161, 83)
         Me.btnNum9.Name = "btnNum9"
         Me.btnNum9.Size = New System.Drawing.Size(73, 74)
         Me.btnNum9.TabIndex = 2
         Me.btnNum9.Text = "9"
-        Me.btnNum9.UseVisualStyleBackColor = True
+        Me.btnNum9.UseVisualStyleBackColor = False
         '
         'btnDiv
         '
+        Me.btnDiv.BackColor = System.Drawing.SystemColors.ControlDark
         Me.btnDiv.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.btnDiv.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnDiv.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnDiv.Location = New System.Drawing.Point(240, 83)
         Me.btnDiv.Name = "btnDiv"
         Me.btnDiv.Size = New System.Drawing.Size(73, 74)
         Me.btnDiv.TabIndex = 3
         Me.btnDiv.Text = "/"
-        Me.btnDiv.UseVisualStyleBackColor = True
+        Me.btnDiv.UseVisualStyleBackColor = False
         '
         'btnNum4
         '
+        Me.btnNum4.BackColor = System.Drawing.SystemColors.ScrollBar
         Me.btnNum4.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.btnNum4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnNum4.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnNum4.Location = New System.Drawing.Point(3, 163)
         Me.btnNum4.Name = "btnNum4"
         Me.btnNum4.Size = New System.Drawing.Size(73, 74)
         Me.btnNum4.TabIndex = 4
         Me.btnNum4.Text = "4"
-        Me.btnNum4.UseVisualStyleBackColor = True
+        Me.btnNum4.UseVisualStyleBackColor = False
         '
         'btnNum5
         '
+        Me.btnNum5.BackColor = System.Drawing.SystemColors.ScrollBar
         Me.btnNum5.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.btnNum5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnNum5.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnNum5.Location = New System.Drawing.Point(82, 163)
         Me.btnNum5.Name = "btnNum5"
         Me.btnNum5.Size = New System.Drawing.Size(73, 74)
         Me.btnNum5.TabIndex = 5
         Me.btnNum5.Text = "5"
-        Me.btnNum5.UseVisualStyleBackColor = True
+        Me.btnNum5.UseVisualStyleBackColor = False
         '
         'btnNum6
         '
+        Me.btnNum6.BackColor = System.Drawing.SystemColors.ScrollBar
         Me.btnNum6.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.btnNum6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnNum6.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnNum6.Location = New System.Drawing.Point(161, 163)
         Me.btnNum6.Name = "btnNum6"
         Me.btnNum6.Size = New System.Drawing.Size(73, 74)
         Me.btnNum6.TabIndex = 6
         Me.btnNum6.Text = "6"
-        Me.btnNum6.UseVisualStyleBackColor = True
+        Me.btnNum6.UseVisualStyleBackColor = False
         '
         'btnMult
         '
+        Me.btnMult.BackColor = System.Drawing.SystemColors.ControlDark
         Me.btnMult.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.btnMult.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnMult.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnMult.Location = New System.Drawing.Point(240, 163)
         Me.btnMult.Name = "btnMult"
         Me.btnMult.Size = New System.Drawing.Size(73, 74)
         Me.btnMult.TabIndex = 7
         Me.btnMult.Text = "×"
-        Me.btnMult.UseVisualStyleBackColor = True
+        Me.btnMult.UseVisualStyleBackColor = False
         '
         'btnNum1
         '
+        Me.btnNum1.BackColor = System.Drawing.SystemColors.ScrollBar
         Me.btnNum1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.btnNum1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnNum1.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnNum1.Location = New System.Drawing.Point(3, 243)
         Me.btnNum1.Name = "btnNum1"
         Me.btnNum1.Size = New System.Drawing.Size(73, 74)
         Me.btnNum1.TabIndex = 8
         Me.btnNum1.Text = "1"
-        Me.btnNum1.UseVisualStyleBackColor = True
+        Me.btnNum1.UseVisualStyleBackColor = False
         '
         'btnNum2
         '
+        Me.btnNum2.BackColor = System.Drawing.SystemColors.ScrollBar
         Me.btnNum2.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.btnNum2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnNum2.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnNum2.Location = New System.Drawing.Point(82, 243)
         Me.btnNum2.Name = "btnNum2"
         Me.btnNum2.Size = New System.Drawing.Size(73, 74)
         Me.btnNum2.TabIndex = 9
         Me.btnNum2.Text = "2"
-        Me.btnNum2.UseVisualStyleBackColor = True
+        Me.btnNum2.UseVisualStyleBackColor = False
         '
         'btnNum3
         '
+        Me.btnNum3.BackColor = System.Drawing.SystemColors.ScrollBar
         Me.btnNum3.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.btnNum3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnNum3.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnNum3.Location = New System.Drawing.Point(161, 243)
         Me.btnNum3.Name = "btnNum3"
         Me.btnNum3.Size = New System.Drawing.Size(73, 74)
         Me.btnNum3.TabIndex = 10
         Me.btnNum3.Text = "3"
-        Me.btnNum3.UseVisualStyleBackColor = True
+        Me.btnNum3.UseVisualStyleBackColor = False
         '
         'btnRest
         '
+        Me.btnRest.BackColor = System.Drawing.SystemColors.ControlDark
         Me.btnRest.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.btnRest.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnRest.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnRest.Location = New System.Drawing.Point(240, 243)
         Me.btnRest.Name = "btnRest"
         Me.btnRest.Size = New System.Drawing.Size(73, 74)
         Me.btnRest.TabIndex = 11
         Me.btnRest.Text = "-"
-        Me.btnRest.UseVisualStyleBackColor = True
+        Me.btnRest.UseVisualStyleBackColor = False
         '
         'btnBorrar
         '
+        Me.btnBorrar.BackColor = System.Drawing.SystemColors.ControlDark
         Me.btnBorrar.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.btnBorrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnBorrar.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnBorrar.Location = New System.Drawing.Point(319, 3)
         Me.btnBorrar.Name = "btnBorrar"
         Me.btnBorrar.Size = New System.Drawing.Size(75, 74)
         Me.btnBorrar.TabIndex = 14
         Me.btnBorrar.Text = "<="
-        Me.btnBorrar.UseVisualStyleBackColor = True
+        Me.btnBorrar.UseVisualStyleBackColor = False
         '
         'btnMas
         '
+        Me.btnMas.BackColor = System.Drawing.SystemColors.ControlDark
         Me.btnMas.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.btnMas.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnMas.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnMas.Location = New System.Drawing.Point(240, 323)
         Me.btnMas.Name = "btnMas"
         Me.btnMas.Size = New System.Drawing.Size(73, 74)
         Me.btnMas.TabIndex = 15
         Me.btnMas.Text = "+"
-        Me.btnMas.UseVisualStyleBackColor = True
+        Me.btnMas.UseVisualStyleBackColor = False
         '
         'btnCE
         '
+        Me.btnCE.BackColor = System.Drawing.SystemColors.ControlDark
         Me.btnCE.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.btnCE.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnCE.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnCE.Location = New System.Drawing.Point(319, 163)
         Me.btnCE.Name = "btnCE"
         Me.btnCE.Size = New System.Drawing.Size(75, 74)
         Me.btnCE.TabIndex = 16
         Me.btnCE.Text = "CE"
-        Me.btnCE.UseVisualStyleBackColor = True
+        Me.btnCE.UseVisualStyleBackColor = False
         '
         'TableLayoutPanel1
         '
@@ -283,55 +315,65 @@ Partial Class Form1
         '
         'btnInversa
         '
+        Me.btnInversa.BackColor = System.Drawing.SystemColors.ControlDark
         Me.TableLayoutPanel1.SetColumnSpan(Me.btnInversa, 2)
         Me.btnInversa.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.btnInversa.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnInversa.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnInversa.Location = New System.Drawing.Point(161, 3)
         Me.btnInversa.Name = "btnInversa"
         Me.btnInversa.Size = New System.Drawing.Size(152, 74)
         Me.btnInversa.TabIndex = 22
         Me.btnInversa.Text = "1/x"
-        Me.btnInversa.UseVisualStyleBackColor = True
+        Me.btnInversa.UseVisualStyleBackColor = False
         '
         'btnPorcentaje
         '
+        Me.btnPorcentaje.BackColor = System.Drawing.SystemColors.ControlDark
         Me.TableLayoutPanel1.SetColumnSpan(Me.btnPorcentaje, 2)
         Me.btnPorcentaje.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.btnPorcentaje.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnPorcentaje.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnPorcentaje.Location = New System.Drawing.Point(3, 3)
         Me.btnPorcentaje.Name = "btnPorcentaje"
         Me.btnPorcentaje.Size = New System.Drawing.Size(152, 74)
         Me.btnPorcentaje.TabIndex = 21
         Me.btnPorcentaje.Text = "%"
-        Me.btnPorcentaje.UseVisualStyleBackColor = True
+        Me.btnPorcentaje.UseVisualStyleBackColor = False
         '
         'btnNum0
         '
         Me.btnNum0.AutoSize = True
+        Me.btnNum0.BackColor = System.Drawing.SystemColors.ScrollBar
         Me.btnNum0.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.btnNum0.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnNum0.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnNum0.Location = New System.Drawing.Point(82, 323)
         Me.btnNum0.Name = "btnNum0"
         Me.btnNum0.Size = New System.Drawing.Size(73, 74)
         Me.btnNum0.TabIndex = 20
         Me.btnNum0.Text = "0"
-        Me.btnNum0.UseVisualStyleBackColor = True
+        Me.btnNum0.UseVisualStyleBackColor = False
         '
         'btnSigno
         '
         Me.btnSigno.AutoSize = True
+        Me.btnSigno.BackColor = System.Drawing.SystemColors.ScrollBar
         Me.btnSigno.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.btnSigno.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnSigno.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnSigno.Location = New System.Drawing.Point(3, 323)
         Me.btnSigno.Name = "btnSigno"
         Me.btnSigno.Size = New System.Drawing.Size(73, 74)
         Me.btnSigno.TabIndex = 19
         Me.btnSigno.Text = "+/-"
-        Me.btnSigno.UseVisualStyleBackColor = True
+        Me.btnSigno.UseVisualStyleBackColor = False
         '
         'btnIgual
         '
+        Me.btnIgual.BackColor = System.Drawing.Color.FromArgb(CType(CType(33, Byte), Integer), CType(CType(149, Byte), Integer), CType(CType(242, Byte), Integer))
         Me.btnIgual.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.btnIgual.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnIgual.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnIgual.Location = New System.Drawing.Point(319, 243)
         Me.btnIgual.Name = "btnIgual"
@@ -339,18 +381,20 @@ Partial Class Form1
         Me.btnIgual.Size = New System.Drawing.Size(75, 154)
         Me.btnIgual.TabIndex = 18
         Me.btnIgual.Text = "="
-        Me.btnIgual.UseVisualStyleBackColor = True
+        Me.btnIgual.UseVisualStyleBackColor = False
         '
         'btnC
         '
+        Me.btnC.BackColor = System.Drawing.SystemColors.ControlDark
         Me.btnC.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.btnC.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnC.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnC.Location = New System.Drawing.Point(319, 83)
         Me.btnC.Name = "btnC"
         Me.btnC.Size = New System.Drawing.Size(75, 74)
         Me.btnC.TabIndex = 17
         Me.btnC.Text = "C"
-        Me.btnC.UseVisualStyleBackColor = True
+        Me.btnC.UseVisualStyleBackColor = False
         '
         'Form1
         '
