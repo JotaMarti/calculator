@@ -5,14 +5,15 @@
     Dim btnClicked As Button
     Dim previousOperation As Button
     Dim currentOperation As Button
-    Dim limpiaPantalla As Boolean = True
+    Dim limpiaPantalla As Boolean = False
     Dim numberEntered As Boolean = False
     Dim maxLenght As Integer = 16
 
 
     Private Sub btnNum_Click(sender As Object, e As EventArgs) Handles btnNum0.Click, btnNum1.Click, btnNum9.Click, btnNum8.Click, btnNum7.Click, btnNum6.Click, btnNum5.Click, btnNum4.Click, btnNum3.Click, btnNum2.Click
 
-        If limpiaPantalla = True Then
+        If limpiaPantalla = True AndAlso
+            btnClicked.Text <> "," Then
             cleanTxtBox()
         End If
 
@@ -21,7 +22,7 @@
         ' Con esto no añado más numero si ha superado el largo máximo, en este caso he puesto 16
         ' También realizo varias comprobaciones para no poner ceros a la izquierda
         If txtBoxResultado.Text.Length < maxLenght Then
-            If btnClicked.Text = btnComa.Text Then
+            If btnClicked.Text = btnNum0.Text Then
                 If txtBoxResultado.Text = "0" Or
                     txtBoxResultado.Text = "" Then
                     txtBoxResultado.Text = "0"
@@ -154,7 +155,7 @@
     Private Sub btnC_Click(sender As Object, e As EventArgs) Handles btnC.Click
 
         txtBoxResultado.Text = "0"
-        limpiaPantalla = True
+        limpiaPantalla = False
 
         operador1 = Nothing
         operador2 = Nothing
@@ -190,6 +191,18 @@
         Else
             txtBoxResultado.Text = txtBoxResultado.Text.Replace("-", "")
         End If
+
+    End Sub
+
+    Private Sub btnComa_Click(sender As Object, e As EventArgs) Handles btnComa.Click
+
+        btnClicked = TryCast(sender, Button)
+
+        If Not txtBoxResultado.Text.Contains(",") Then
+            txtBoxResultado.Text = txtBoxResultado.Text + ","
+        End If
+
+
 
     End Sub
 End Class
