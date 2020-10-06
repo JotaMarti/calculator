@@ -40,12 +40,12 @@ Partial Class Form1
         Me.btnMas = New System.Windows.Forms.Button()
         Me.btnCE = New System.Windows.Forms.Button()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
+        Me.btnInversa = New System.Windows.Forms.Button()
+        Me.btnPorcentaje = New System.Windows.Forms.Button()
         Me.btnNum0 = New System.Windows.Forms.Button()
         Me.btnSigno = New System.Windows.Forms.Button()
         Me.btnIgual = New System.Windows.Forms.Button()
         Me.btnC = New System.Windows.Forms.Button()
-        Me.btnPorcentaje = New System.Windows.Forms.Button()
-        Me.btnInversa = New System.Windows.Forms.Button()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -281,6 +281,30 @@ Partial Class Form1
         Me.TableLayoutPanel1.Size = New System.Drawing.Size(397, 397)
         Me.TableLayoutPanel1.TabIndex = 0
         '
+        'btnInversa
+        '
+        Me.TableLayoutPanel1.SetColumnSpan(Me.btnInversa, 2)
+        Me.btnInversa.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.btnInversa.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnInversa.Location = New System.Drawing.Point(161, 3)
+        Me.btnInversa.Name = "btnInversa"
+        Me.btnInversa.Size = New System.Drawing.Size(152, 74)
+        Me.btnInversa.TabIndex = 22
+        Me.btnInversa.Text = "1/x"
+        Me.btnInversa.UseVisualStyleBackColor = True
+        '
+        'btnPorcentaje
+        '
+        Me.TableLayoutPanel1.SetColumnSpan(Me.btnPorcentaje, 2)
+        Me.btnPorcentaje.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.btnPorcentaje.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnPorcentaje.Location = New System.Drawing.Point(3, 3)
+        Me.btnPorcentaje.Name = "btnPorcentaje"
+        Me.btnPorcentaje.Size = New System.Drawing.Size(152, 74)
+        Me.btnPorcentaje.TabIndex = 21
+        Me.btnPorcentaje.Text = "%"
+        Me.btnPorcentaje.UseVisualStyleBackColor = True
+        '
         'btnNum0
         '
         Me.btnNum0.AutoSize = True
@@ -327,30 +351,6 @@ Partial Class Form1
         Me.btnC.TabIndex = 17
         Me.btnC.Text = "C"
         Me.btnC.UseVisualStyleBackColor = True
-        '
-        'btnPorcentaje
-        '
-        Me.TableLayoutPanel1.SetColumnSpan(Me.btnPorcentaje, 2)
-        Me.btnPorcentaje.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.btnPorcentaje.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnPorcentaje.Location = New System.Drawing.Point(3, 3)
-        Me.btnPorcentaje.Name = "btnPorcentaje"
-        Me.btnPorcentaje.Size = New System.Drawing.Size(152, 74)
-        Me.btnPorcentaje.TabIndex = 21
-        Me.btnPorcentaje.Text = "%"
-        Me.btnPorcentaje.UseVisualStyleBackColor = True
-        '
-        'btnInversa
-        '
-        Me.TableLayoutPanel1.SetColumnSpan(Me.btnInversa, 2)
-        Me.btnInversa.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.btnInversa.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnInversa.Location = New System.Drawing.Point(161, 3)
-        Me.btnInversa.Name = "btnInversa"
-        Me.btnInversa.Size = New System.Drawing.Size(152, 74)
-        Me.btnInversa.TabIndex = 22
-        Me.btnInversa.Text = "1/x"
-        Me.btnInversa.UseVisualStyleBackColor = True
         '
         'Form1
         '

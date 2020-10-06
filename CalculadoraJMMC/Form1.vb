@@ -90,13 +90,13 @@
 
             If buttonOrigin.Text = "=" Then
                 resultado = makeOperation(operador1, operador2, currentOperation.Text)
-                txtBoxResultado.Text = resultado
+                txtBoxResultado.Text = Math.Round(resultado, 15)
                 limpiaPantalla = True
                 operador1 = Nothing
                 operador2 = Nothing
             Else
                 resultado = makeOperation(operador1, operador2, previousOperation.Text)
-                txtBoxResultado.Text = resultado
+                txtBoxResultado.Text = Math.Round(resultado, 15)
                 limpiaPantalla = True
                 operador1 = resultado
                 numberEntered = False
@@ -111,15 +111,37 @@
 
         Dim Resultado As Decimal
 
-        If sender = "+" Then
-            Resultado = op1 + op2
-        ElseIf sender = "-" Then
-            Resultado = op1 - op2
-        ElseIf sender = "×" Then
-            Resultado = op1 * op2
-        ElseIf sender = "/" Then
-            Resultado = op1 / op2
-        End If
+        'If sender = "+" Then
+        '    Resultado = op1 + op2
+        'ElseIf sender = "-" Then
+        '    Resultado = op1 - op2
+        'ElseIf sender = "×" Then
+        '    Resultado = op1 * op2
+        'ElseIf sender = "/" Then
+        '    Resultado = op1 / op2
+        'End If
+
+        Select Case sender
+            Case "+"
+                Resultado = op1 + op2
+            Case "-"
+                Resultado = op1 - op2
+            Case "×"
+                Resultado = op1 * op2
+            Case "/"
+                Resultado = op1 / op2
+            Case "%"
+                Select Case previousOperation.Text
+                    Case "-"
+                        Resultado = op1 - (op1 * (op2 / 100.0))
+                    Case "+"
+                        Resultado = op1 + (op1 * (op2 / 100.0))
+                    Case "×"
+                        Resultado = op1 * (op2 / 100.0)
+                End Select
+        End Select
+
+
 
         Return Resultado
 
@@ -203,6 +225,22 @@
         End If
 
 
+
+    End Sub
+
+    Private Sub btnInversa_Click(sender As Object, e As EventArgs) Handles btnInversa.Click
+
+        If txtBoxResultado.Text <> 0 Then
+            txtBoxResultado.Text = 1 / Decimal.Parse(txtBoxResultado.Text)
+        End If
+
+    End Sub
+
+    Private Sub btnPorcentaje_Click(sender As Object, e As EventArgs) Handles btnPorcentaje.Click
+
+        previousOperation = currentOperation
+
+        currentOperation = sender
 
     End Sub
 End Class
