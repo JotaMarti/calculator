@@ -541,7 +541,7 @@ Partial Class Form1
         Me.btnPowY.Name = "btnPowY"
         Me.btnPowY.Size = New System.Drawing.Size(73, 59)
         Me.btnPowY.TabIndex = 25
-        Me.btnPowY.Text = "xy"
+        Me.btnPowY.Text = "xʸ"
         Me.btnPowY.UseVisualStyleBackColor = False
         '
         'btnPow3
@@ -554,7 +554,7 @@ Partial Class Form1
         Me.btnPow3.Name = "btnPow3"
         Me.btnPow3.Size = New System.Drawing.Size(73, 59)
         Me.btnPow3.TabIndex = 24
-        Me.btnPow3.Text = "x3"
+        Me.btnPow3.Text = "x³"
         Me.btnPow3.UseVisualStyleBackColor = False
         '
         'btnPow2
@@ -567,7 +567,7 @@ Partial Class Form1
         Me.btnPow2.Name = "btnPow2"
         Me.btnPow2.Size = New System.Drawing.Size(73, 59)
         Me.btnPow2.TabIndex = 23
-        Me.btnPow2.Text = "x2"
+        Me.btnPow2.Text = "x²"
         Me.btnPow2.UseVisualStyleBackColor = False
         '
         'btnPorcentajeScientific
