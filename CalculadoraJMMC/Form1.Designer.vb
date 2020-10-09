@@ -40,12 +40,12 @@ Partial Class Form1
         Me.btnMas = New System.Windows.Forms.Button()
         Me.btnCE = New System.Windows.Forms.Button()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
-        Me.btnInversa = New System.Windows.Forms.Button()
         Me.btnPorcentaje = New System.Windows.Forms.Button()
         Me.btnNum0 = New System.Windows.Forms.Button()
         Me.btnSigno = New System.Windows.Forms.Button()
         Me.btnIgual = New System.Windows.Forms.Button()
         Me.btnC = New System.Windows.Forms.Button()
+        Me.btnInversa = New System.Windows.Forms.Button()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -315,20 +315,6 @@ Partial Class Form1
         Me.TableLayoutPanel1.Size = New System.Drawing.Size(397, 397)
         Me.TableLayoutPanel1.TabIndex = 0
         '
-        'btnInversa
-        '
-        Me.btnInversa.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.btnInversa.BackColor = System.Drawing.Color.Transparent
-        Me.TableLayoutPanel1.SetColumnSpan(Me.btnInversa, 2)
-        Me.btnInversa.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnInversa.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnInversa.Location = New System.Drawing.Point(161, 14)
-        Me.btnInversa.Name = "btnInversa"
-        Me.btnInversa.Size = New System.Drawing.Size(152, 51)
-        Me.btnInversa.TabIndex = 22
-        Me.btnInversa.Text = "1/x"
-        Me.btnInversa.UseVisualStyleBackColor = False
-        '
         'btnPorcentaje
         '
         Me.btnPorcentaje.Anchor = System.Windows.Forms.AnchorStyles.None
@@ -397,6 +383,20 @@ Partial Class Form1
         Me.btnC.TabIndex = 17
         Me.btnC.Text = "C"
         Me.btnC.UseVisualStyleBackColor = False
+        '
+        'btnInversa
+        '
+        Me.btnInversa.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.btnInversa.BackColor = System.Drawing.Color.Transparent
+        Me.TableLayoutPanel1.SetColumnSpan(Me.btnInversa, 2)
+        Me.btnInversa.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnInversa.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnInversa.Location = New System.Drawing.Point(161, 14)
+        Me.btnInversa.Name = "btnInversa"
+        Me.btnInversa.Size = New System.Drawing.Size(152, 51)
+        Me.btnInversa.TabIndex = 22
+        Me.btnInversa.Text = "1/x"
+        Me.btnInversa.UseVisualStyleBackColor = False
         '
         'Form1
         '

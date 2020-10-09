@@ -8,6 +8,8 @@
     Dim limpiaPantalla As Boolean = False
     Dim numberEntered As Boolean = False
     Dim maxLenght As Integer = 16
+    Dim empty As String = ""
+    Dim numeroCero As String = "0"
 
 
     Private Sub btnNum_Click(sender As Object, e As EventArgs) Handles btnNum0.Click, btnNum1.Click, btnNum9.Click, btnNum8.Click, btnNum7.Click, btnNum6.Click, btnNum5.Click, btnNum4.Click, btnNum3.Click, btnNum2.Click
@@ -20,19 +22,19 @@
         btnClicked = TryCast(sender, Button)
 
 
-        ' Con esto no añado más numero si ha superado el largo máximo, en este caso he puesto 16
+        ' Con esto no añado más numeros si ha superado el largo máximo, en este caso he puesto 16
         ' También realizo varias comprobaciones para no poner ceros a la izquierda
         If txtBoxResultado.Text.Length < maxLenght Then
             If btnClicked.Text = btnNum0.Text Then
-                If txtBoxResultado.Text = "0" Or
-                    txtBoxResultado.Text = "" Then
-                    txtBoxResultado.Text = "0"
+                If txtBoxResultado.Text = numeroCero Or
+                    txtBoxResultado.Text = empty Then
+                    txtBoxResultado.Text = numeroCero
                 Else
                     txtBoxResultado.Text = txtBoxResultado.Text & btnClicked.Text
                 End If
             Else
-                If txtBoxResultado.Text = "0" Then
-                    txtBoxResultado.Text = ""
+                If txtBoxResultado.Text = numeroCero Then
+                    txtBoxResultado.Text = empty
                 End If
                 txtBoxResultado.Text = txtBoxResultado.Text & btnClicked.Text
                 numberEntered = True
@@ -41,7 +43,7 @@
 
     End Sub
 
-    Private Sub btnOperation_Click(sender As Object, e As EventArgs) Handles btnMas.Click, btnMult.Click, btnRest.Click, btnDiv.Click
+    Private Sub btnOperation_Click(sender As Object, e As EventArgs) Handles btnMas.Click, btnMult.Click, btnRest.Click, btnDiv.Click, btnPorcentaje.Click
 
         ' Si la operacion actual no es nula me guardo la operacion anterior
         If currentOperation IsNot Nothing Then
@@ -59,12 +61,15 @@
         ' Si el operador1 esta vacio y hemos escrito algo me guardo el valor, si no se ha escrito nada vuelvo a pintar el 0
         ' Y si todo es correcto llamo al sub del boton igual para realizar la operacion con el valor de la operacion anterior.
         If operador1 Is Nothing AndAlso
-            txtBoxResultado.Text <> "0" Then
+            txtBoxResultado.Text <> numeroCero Then
             operador1 = Decimal.Parse(txtBoxResultado.Text)
             limpiaPantalla = True
         ElseIf operador1 Is Nothing AndAlso
-            txtBoxResultado.Text = "0" Then
-            txtBoxResultado.Text = "0"
+            txtBoxResultado.Text = numeroCero Then
+            txtBoxResultado.Text = numeroCero
+        ElseIf operador1 IsNot Nothing AndAlso
+                currentOperation.Text = btnPorcentaje.Text Then
+            btnIgual_Click(currentOperation, e)
         Else
             btnIgual_Click(previousOperation, e)
         End If
@@ -89,14 +94,14 @@
 
             operador2 = Decimal.Parse(txtBoxResultado.Text)
 
-            If buttonOrigin.Text = "=" Then
+            If buttonOrigin.Text = btnIgual.Text Then
                 resultado = makeOperation(operador1, operador2, currentOperation.Text)
                 txtBoxResultado.Text = Math.Round(resultado, 15)
                 limpiaPantalla = True
                 operador1 = Nothing
                 operador2 = Nothing
             Else
-                resultado = makeOperation(operador1, operador2, previousOperation.Text)
+                resultado = makeOperation(operador1, operador2, buttonOrigin.Text)
                 txtBoxResultado.Text = Math.Round(resultado, 15)
                 limpiaPantalla = True
                 operador1 = resultado
@@ -112,37 +117,25 @@
 
         Dim Resultado As Decimal
 
-        'If sender = "+" Then
-        '    Resultado = op1 + op2
-        'ElseIf sender = "-" Then
-        '    Resultado = op1 - op2
-        'ElseIf sender = "×" Then
-        '    Resultado = op1 * op2
-        'ElseIf sender = "/" Then
-        '    Resultado = op1 / op2
-        'End If
-
         Select Case sender
-            Case "+"
+            Case btnMas.Text
                 Resultado = op1 + op2
-            Case "-"
+            Case btnRest.Text
                 Resultado = op1 - op2
-            Case "×"
+            Case btnMult.Text
                 Resultado = op1 * op2
-            Case "/"
+            Case btnDiv.Text
                 Resultado = op1 / op2
-            Case "%"
+            Case btnPorcentaje.Text
                 Select Case previousOperation.Text
-                    Case "-"
+                    Case btnRest.Text
                         Resultado = op1 - (op1 * (op2 / 100.0))
-                    Case "+"
+                    Case btnMas.Text
                         Resultado = op1 + (op1 * (op2 / 100.0))
-                    Case "×"
+                    Case btnMult.Text
                         Resultado = op1 * (op2 / 100.0)
                 End Select
         End Select
-
-
 
         Return Resultado
 
@@ -164,10 +157,10 @@
             End If
 
         ElseIf txtBoxResultado.Text.Length = 0 Then
-            txtBoxResultado.Text = "0"
+            txtBoxResultado.Text = numeroCero
             limpiaPantalla = True
         ElseIf txtBoxResultado.Text.Length = 1 Then
-            txtBoxResultado.Text = "0"
+            txtBoxResultado.Text = numeroCero
             limpiaPantalla = True
         End If
 
@@ -177,7 +170,7 @@
 
     Private Sub btnC_Click(sender As Object, e As EventArgs) Handles btnC.Click
 
-        txtBoxResultado.Text = "0"
+        txtBoxResultado.Text = numeroCero
         limpiaPantalla = False
 
         operador1 = Nothing
@@ -187,7 +180,7 @@
 
     Private Sub btnCE_Click(sender As Object, e As EventArgs) Handles btnCE.Click
 
-        txtBoxResultado.Text = "0"
+        txtBoxResultado.Text = numeroCero
         limpiaPantalla = True
 
         btnClicked = TryCast(sender, Button)
@@ -197,7 +190,7 @@
 
     Private Sub cleanTxtBox()
 
-        If txtBoxResultado.Text <> "0" Then
+        If txtBoxResultado.Text <> numeroCero Then
             operador1 = Decimal.Parse(txtBoxResultado.Text)
         End If
         txtBoxResultado.Text = ""
@@ -207,7 +200,9 @@
 
     Private Sub btnSigno_Click(sender As Object, e As EventArgs) Handles btnSigno.Click
 
-        If txtBoxResultado.Text <> "0" AndAlso
+        ' Si el textBox no tiene solo un numero 0 y si ademas no tiene un signo negativa le pongo el signo negativo al principio del string
+        ' Si el textBox ya tiene un signo negativo lo quito al pulsar el boton
+        If txtBoxResultado.Text <> numeroCero AndAlso
             Not txtBoxResultado.Text.Contains("-") Then
 
             txtBoxResultado.Text = "-" + txtBoxResultado.Text
@@ -237,11 +232,4 @@
 
     End Sub
 
-    Private Sub btnPorcentaje_Click(sender As Object, e As EventArgs) Handles btnPorcentaje.Click
-
-        previousOperation = currentOperation
-
-        currentOperation = sender
-
-    End Sub
 End Class
