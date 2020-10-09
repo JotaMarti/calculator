@@ -9,4 +9,6 @@ This is a project in course for the class of "Diseño de interfaces", I will be 
 - **Stage 4**: Features to add to our calculator: Menu that allows you to switch from standard mode to scientific mode (e.g. View --> Standard | Scientific). In scientific mode, we'll implement the following functions: x^2, x^3, x^y, n!.
 - **Stage 5**: Features to add to our calculator: Menu that allows to display a help window. Implement the help window. Redesign your calculator (if you think it's necessary) and apply what you learned during its development to improve written code.
 
-Right now I'm working on Stage 4.
+Right now I have finished Stage 3 and the calculator looks like this:
+
+![](https://raw.githubusercontent.com/JotaMarti/calculator/master/calculator.JPG)
