@@ -10,9 +10,10 @@
     Dim maxLenght As Integer = 16
     Dim empty As String = ""
     Dim numeroCero As String = "0"
+    Dim powY As Boolean = False
 
 
-    Private Sub btnNum_Click(sender As Object, e As EventArgs) Handles btnNum0.Click, btnNum1.Click, btnNum9.Click, btnNum8.Click, btnNum7.Click, btnNum6.Click, btnNum5.Click, btnNum4.Click, btnNum3.Click, btnNum2.Click
+    Private Sub btnNum_Click(sender As Object, e As EventArgs) Handles btnNum0.Click, btnNum1.Click, btnNum9.Click, btnNum8.Click, btnNum7.Click, btnNum6.Click, btnNum5.Click, btnNum4.Click, btnNum3.Click, btnNum2.Click, btnNum9Scientific.Click, btnNum8Scientific.Click, btnNum7Scientific.Click, btnNum6Scientific.Click, btnNum5Scientific.Click, btnNum4Scientific.Click, btnNum3Scientific.Click, btnNum2Scientific.Click, btnNum1Scientific.Click, btnNum0Scientific.Click
 
         If limpiaPantalla = True AndAlso
             btnClicked.Text <> "," Then
@@ -20,6 +21,14 @@
         End If
 
         btnClicked = TryCast(sender, Button)
+
+        If powY Then
+            If Not LabelPow.Text.Length >= 2 Then
+                LabelPow.Text = LabelPow.Text & btnClicked.Text
+                Exit Sub
+            End If
+            Exit Sub
+        End If
 
 
         ' Con esto no añado más numeros si ha superado el largo máximo, en este caso he puesto 16
@@ -43,7 +52,7 @@
 
     End Sub
 
-    Private Sub btnOperation_Click(sender As Object, e As EventArgs) Handles btnMas.Click, btnMult.Click, btnRest.Click, btnDiv.Click, btnPorcentaje.Click
+    Private Sub btnOperation_Click(sender As Object, e As EventArgs) Handles btnMas.Click, btnMult.Click, btnRest.Click, btnDiv.Click, btnPorcentaje.Click, btnSumScientific.Click, btnRestScientific.Click, btnPorcentajeScientific.Click, btnMultScientific.Click, btnDivScientific.Click
 
         ' Si la operacion actual no es nula me guardo la operacion anterior
         If currentOperation IsNot Nothing Then
@@ -81,7 +90,7 @@
 
     End Sub
 
-    Private Sub btnIgual_Click(sender As Object, e As EventArgs) Handles btnIgual.Click
+    Private Sub btnIgual_Click(sender As Object, e As EventArgs) Handles btnIgual.Click, btnIgualScientific.Click
 
         Dim buttonOrigin As Button
 
@@ -92,7 +101,15 @@
         ' Si tenemos operador1 guardamos operador2 y depende de si le hemos pulsado en igual o en los operador realizo dos cosas distintas
         If operador1 IsNot Nothing Then
 
-            operador2 = Decimal.Parse(txtBoxResultado.Text)
+            If powY Then
+                If LabelPow.Text.Length > 0 Then
+                    operador2 = Math.Pow(Decimal.Parse(txtBoxResultado.Text), Integer.Parse(LabelPow.Text))
+                Else
+                    operador2 = Decimal.Parse(txtBoxResultado.Text)
+                End If
+            Else
+                operador2 = Decimal.Parse(txtBoxResultado.Text)
+            End If
 
             If buttonOrigin.Text = btnIgual.Text Then
                 resultado = makeOperation(operador1, operador2, currentOperation.Text)
@@ -100,16 +117,26 @@
                 limpiaPantalla = True
                 operador1 = Nothing
                 operador2 = Nothing
+                hidePowY()
             Else
                 resultado = makeOperation(operador1, operador2, buttonOrigin.Text)
                 txtBoxResultado.Text = Math.Round(resultado, 15)
                 limpiaPantalla = True
                 operador1 = resultado
                 numberEntered = False
+                hidePowY()
             End If
         End If
 
         btnClicked = TryCast(sender, Button)
+
+        If powY Then
+            If LabelPow.Text.Length > 0 Then
+                txtBoxResultado.Text = Math.Pow(Decimal.Parse(txtBoxResultado.Text), Integer.Parse(LabelPow.Text))
+            End If
+            hidePowY()
+            txtBoxResultado.Text = txtBoxResultado.Text.Trim()
+        End If
 
     End Sub
 
@@ -141,7 +168,14 @@
 
     End Function
 
-    Private Sub btnBorrar_Click(sender As Object, e As EventArgs) Handles btnBorrar.Click
+    Private Sub btnBorrar_Click(sender As Object, e As EventArgs) Handles btnBorrar.Click, btnBorrarScientific.Click
+
+        If powY Then
+            If LabelPow.Text.Length >= 1 Then
+                LabelPow.Text = LabelPow.Text.Substring(0, LabelPow.Text.Length - 1)
+            End If
+            Exit Sub
+        End If
 
         ' En el primer if realizo una comprobación, por que cuando el numero tenia coma se quedaba por ej 3, y generaba problemas,
         ' lo que hago es comprobar si lo siguiente a borrar es un coma y en ese caso borro el numero y la coma
@@ -168,7 +202,9 @@
 
     End Sub
 
-    Private Sub btnC_Click(sender As Object, e As EventArgs) Handles btnC.Click
+    Private Sub btnC_Click(sender As Object, e As EventArgs) Handles btnC.Click, btnCScientific.Click
+
+        hidePowY()
 
         txtBoxResultado.Text = numeroCero
         limpiaPantalla = False
@@ -178,7 +214,9 @@
 
     End Sub
 
-    Private Sub btnCE_Click(sender As Object, e As EventArgs) Handles btnCE.Click
+    Private Sub btnCE_Click(sender As Object, e As EventArgs) Handles btnCE.Click, btnCEScientific.Click
+
+        hidePowY()
 
         txtBoxResultado.Text = numeroCero
         limpiaPantalla = True
@@ -195,10 +233,13 @@
         End If
         txtBoxResultado.Text = ""
         limpiaPantalla = False
+        hidePowY()
 
     End Sub
 
-    Private Sub btnSigno_Click(sender As Object, e As EventArgs) Handles btnSigno.Click
+    Private Sub btnSigno_Click(sender As Object, e As EventArgs) Handles btnSigno.Click, btnSignoScientific.Click
+
+        hidePowY()
 
         ' Si el textBox no tiene solo un numero 0 y si ademas no tiene un signo negativa le pongo el signo negativo al principio del string
         ' Si el textBox ya tiene un signo negativo lo quito al pulsar el boton
@@ -212,7 +253,9 @@
 
     End Sub
 
-    Private Sub btnComa_Click(sender As Object, e As EventArgs) Handles btnComa.Click
+    Private Sub btnComa_Click(sender As Object, e As EventArgs) Handles btnComa.Click, btnComaScientific.Click
+
+        hidePowY()
 
         btnClicked = TryCast(sender, Button)
 
@@ -224,7 +267,9 @@
 
     End Sub
 
-    Private Sub btnInversa_Click(sender As Object, e As EventArgs) Handles btnInversa.Click
+    Private Sub btnInversa_Click(sender As Object, e As EventArgs) Handles btnInversa.Click, btnReverseScientific.Click
+
+        hidePowY()
 
         If txtBoxResultado.Text <> 0 Then
             txtBoxResultado.Text = 1 / Decimal.Parse(txtBoxResultado.Text)
@@ -232,4 +277,84 @@
 
     End Sub
 
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+        MenuStripStandard.Checked = True
+        TableLayoutPanelScientific.Visible = False
+        TableLayoutPanel1.Visible = True
+        PanelHideStandard.Visible = False
+
+        hidePowY()
+
+
+    End Sub
+
+    Private Sub MenuStricScientific_Click(sender As Object, e As EventArgs) Handles MenuStricScientific.Click
+
+        MenuStripStandard.Checked = False
+        MenuStricScientific.Checked = True
+
+        TableLayoutPanel1.Visible = False
+        TableLayoutPanelScientific.Visible = True
+        PanelHideStandard.Visible = True
+
+
+    End Sub
+
+    Private Sub MenuStripStandard_Click(sender As Object, e As EventArgs) Handles MenuStripStandard.Click
+
+        MenuStripStandard.Checked = True
+        MenuStricScientific.Checked = False
+
+        TableLayoutPanel1.Visible = True
+        TableLayoutPanelScientific.Visible = False
+        PanelHideStandard.Visible = False
+
+
+    End Sub
+
+    Private Sub btnPow2_Click(sender As Object, e As EventArgs) Handles btnPow2.Click
+        hidePowY()
+
+        txtBoxResultado.Text = Math.Pow(Decimal.Parse(txtBoxResultado.Text), 2)
+
+    End Sub
+
+    Private Sub btnPow3_Click(sender As Object, e As EventArgs) Handles btnPow3.Click
+        hidePowY()
+
+        txtBoxResultado.Text = Math.Pow(Decimal.Parse(txtBoxResultado.Text), 3)
+
+    End Sub
+
+    Private Sub btnPowY_Click(sender As Object, e As EventArgs) Handles btnPowY.Click
+
+
+        txtBoxResultado.Text = txtBoxResultado.Text + "  "
+        powY = True
+        LabelPow.Visible = True
+
+    End Sub
+
+    Private Sub hidePowY()
+        LabelPow.Text = ""
+        LabelPow.Visible = False
+        powY = False
+    End Sub
+
+    Private Sub btnFactorial_Click(sender As Object, e As EventArgs) Handles btnFactorial.Click
+
+        hidePowY()
+
+        Dim acumulado As Double = 1
+
+        For i As Double = 2 To Double.Parse(txtBoxResultado.Text)
+
+            acumulado = acumulado * i
+
+        Next i
+
+        txtBoxResultado.Text = Math.Round(acumulado, 11)
+
+    End Sub
 End Class
