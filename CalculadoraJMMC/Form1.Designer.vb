@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Form1
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class Form1
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.txtBoxResultado = New System.Windows.Forms.TextBox()
         Me.btnComa = New System.Windows.Forms.Button()
@@ -39,7 +39,7 @@ Partial Class Form1
         Me.btnBorrar = New System.Windows.Forms.Button()
         Me.btnMas = New System.Windows.Forms.Button()
         Me.btnCE = New System.Windows.Forms.Button()
-        Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
+        Me.TableLayoutPanelStandard = New System.Windows.Forms.TableLayoutPanel()
         Me.btnPorcentaje = New System.Windows.Forms.Button()
         Me.btnNum0 = New System.Windows.Forms.Button()
         Me.btnSigno = New System.Windows.Forms.Button()
@@ -79,7 +79,7 @@ Partial Class Form1
         Me.btnComaScientific = New System.Windows.Forms.Button()
         Me.btnReverseScientific = New System.Windows.Forms.Button()
         Me.LabelPow = New System.Windows.Forms.Label()
-        Me.TableLayoutPanel1.SuspendLayout()
+        Me.TableLayoutPanelStandard.SuspendLayout()
         Me.MenuStrip.SuspendLayout()
         Me.PanelHideStandard.SuspendLayout()
         Me.TableLayoutPanelScientific.SuspendLayout()
@@ -309,53 +309,53 @@ Partial Class Form1
         Me.btnCE.Text = "CE"
         Me.btnCE.UseVisualStyleBackColor = False
         '
-        'TableLayoutPanel1
+        'TableLayoutPanelStandard
         '
-        Me.TableLayoutPanel1.ColumnCount = 5
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
-        Me.TableLayoutPanel1.Controls.Add(Me.btnPorcentaje, 0, 0)
-        Me.TableLayoutPanel1.Controls.Add(Me.btnNum0, 1, 4)
-        Me.TableLayoutPanel1.Controls.Add(Me.btnSigno, 0, 4)
-        Me.TableLayoutPanel1.Controls.Add(Me.btnIgual, 4, 3)
-        Me.TableLayoutPanel1.Controls.Add(Me.btnC, 4, 2)
-        Me.TableLayoutPanel1.Controls.Add(Me.btnCE, 4, 1)
-        Me.TableLayoutPanel1.Controls.Add(Me.btnMas, 3, 4)
-        Me.TableLayoutPanel1.Controls.Add(Me.btnBorrar, 4, 0)
-        Me.TableLayoutPanel1.Controls.Add(Me.btnRest, 3, 3)
-        Me.TableLayoutPanel1.Controls.Add(Me.btnNum3, 2, 3)
-        Me.TableLayoutPanel1.Controls.Add(Me.btnNum2, 1, 3)
-        Me.TableLayoutPanel1.Controls.Add(Me.btnNum1, 0, 3)
-        Me.TableLayoutPanel1.Controls.Add(Me.btnMult, 3, 2)
-        Me.TableLayoutPanel1.Controls.Add(Me.btnNum6, 2, 2)
-        Me.TableLayoutPanel1.Controls.Add(Me.btnNum5, 1, 2)
-        Me.TableLayoutPanel1.Controls.Add(Me.btnNum4, 0, 2)
-        Me.TableLayoutPanel1.Controls.Add(Me.btnDiv, 3, 1)
-        Me.TableLayoutPanel1.Controls.Add(Me.btnNum9, 2, 1)
-        Me.TableLayoutPanel1.Controls.Add(Me.btnNum8, 1, 1)
-        Me.TableLayoutPanel1.Controls.Add(Me.btnNum7, 0, 1)
-        Me.TableLayoutPanel1.Controls.Add(Me.btnComa, 2, 4)
-        Me.TableLayoutPanel1.Controls.Add(Me.btnInversa, 2, 0)
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 86)
-        Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
-        Me.TableLayoutPanel1.RowCount = 5
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(397, 397)
-        Me.TableLayoutPanel1.TabIndex = 0
+        Me.TableLayoutPanelStandard.ColumnCount = 5
+        Me.TableLayoutPanelStandard.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
+        Me.TableLayoutPanelStandard.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
+        Me.TableLayoutPanelStandard.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
+        Me.TableLayoutPanelStandard.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
+        Me.TableLayoutPanelStandard.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
+        Me.TableLayoutPanelStandard.Controls.Add(Me.btnPorcentaje, 0, 0)
+        Me.TableLayoutPanelStandard.Controls.Add(Me.btnNum0, 1, 4)
+        Me.TableLayoutPanelStandard.Controls.Add(Me.btnSigno, 0, 4)
+        Me.TableLayoutPanelStandard.Controls.Add(Me.btnIgual, 4, 3)
+        Me.TableLayoutPanelStandard.Controls.Add(Me.btnC, 4, 2)
+        Me.TableLayoutPanelStandard.Controls.Add(Me.btnCE, 4, 1)
+        Me.TableLayoutPanelStandard.Controls.Add(Me.btnMas, 3, 4)
+        Me.TableLayoutPanelStandard.Controls.Add(Me.btnBorrar, 4, 0)
+        Me.TableLayoutPanelStandard.Controls.Add(Me.btnRest, 3, 3)
+        Me.TableLayoutPanelStandard.Controls.Add(Me.btnNum3, 2, 3)
+        Me.TableLayoutPanelStandard.Controls.Add(Me.btnNum2, 1, 3)
+        Me.TableLayoutPanelStandard.Controls.Add(Me.btnNum1, 0, 3)
+        Me.TableLayoutPanelStandard.Controls.Add(Me.btnMult, 3, 2)
+        Me.TableLayoutPanelStandard.Controls.Add(Me.btnNum6, 2, 2)
+        Me.TableLayoutPanelStandard.Controls.Add(Me.btnNum5, 1, 2)
+        Me.TableLayoutPanelStandard.Controls.Add(Me.btnNum4, 0, 2)
+        Me.TableLayoutPanelStandard.Controls.Add(Me.btnDiv, 3, 1)
+        Me.TableLayoutPanelStandard.Controls.Add(Me.btnNum9, 2, 1)
+        Me.TableLayoutPanelStandard.Controls.Add(Me.btnNum8, 1, 1)
+        Me.TableLayoutPanelStandard.Controls.Add(Me.btnNum7, 0, 1)
+        Me.TableLayoutPanelStandard.Controls.Add(Me.btnComa, 2, 4)
+        Me.TableLayoutPanelStandard.Controls.Add(Me.btnInversa, 2, 0)
+        Me.TableLayoutPanelStandard.Location = New System.Drawing.Point(0, 86)
+        Me.TableLayoutPanelStandard.Name = "TableLayoutPanelStandard"
+        Me.TableLayoutPanelStandard.RowCount = 5
+        Me.TableLayoutPanelStandard.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80.0!))
+        Me.TableLayoutPanelStandard.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80.0!))
+        Me.TableLayoutPanelStandard.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80.0!))
+        Me.TableLayoutPanelStandard.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80.0!))
+        Me.TableLayoutPanelStandard.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80.0!))
+        Me.TableLayoutPanelStandard.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
+        Me.TableLayoutPanelStandard.Size = New System.Drawing.Size(397, 397)
+        Me.TableLayoutPanelStandard.TabIndex = 0
         '
         'btnPorcentaje
         '
         Me.btnPorcentaje.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.btnPorcentaje.BackColor = System.Drawing.Color.Transparent
-        Me.TableLayoutPanel1.SetColumnSpan(Me.btnPorcentaje, 2)
+        Me.TableLayoutPanelStandard.SetColumnSpan(Me.btnPorcentaje, 2)
         Me.btnPorcentaje.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnPorcentaje.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnPorcentaje.Location = New System.Drawing.Point(3, 14)
@@ -401,7 +401,7 @@ Partial Class Form1
         Me.btnIgual.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnIgual.Location = New System.Drawing.Point(319, 243)
         Me.btnIgual.Name = "btnIgual"
-        Me.TableLayoutPanel1.SetRowSpan(Me.btnIgual, 2)
+        Me.TableLayoutPanelStandard.SetRowSpan(Me.btnIgual, 2)
         Me.btnIgual.Size = New System.Drawing.Size(75, 154)
         Me.btnIgual.TabIndex = 18
         Me.btnIgual.Text = "="
@@ -424,7 +424,7 @@ Partial Class Form1
         '
         Me.btnInversa.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.btnInversa.BackColor = System.Drawing.Color.Transparent
-        Me.TableLayoutPanel1.SetColumnSpan(Me.btnInversa, 2)
+        Me.TableLayoutPanelStandard.SetColumnSpan(Me.btnInversa, 2)
         Me.btnInversa.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnInversa.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnInversa.Location = New System.Drawing.Point(161, 14)
@@ -453,13 +453,13 @@ Partial Class Form1
         'MenuStripStandard
         '
         Me.MenuStripStandard.Name = "MenuStripStandard"
-        Me.MenuStripStandard.Size = New System.Drawing.Size(152, 22)
+        Me.MenuStripStandard.Size = New System.Drawing.Size(122, 22)
         Me.MenuStripStandard.Text = "Standard"
         '
         'MenuStricScientific
         '
         Me.MenuStricScientific.Name = "MenuStricScientific"
-        Me.MenuStricScientific.Size = New System.Drawing.Size(152, 22)
+        Me.MenuStricScientific.Size = New System.Drawing.Size(122, 22)
         Me.MenuStricScientific.Text = "Scientific"
         '
         'PanelHideStandard
@@ -883,14 +883,14 @@ Partial Class Form1
         Me.Controls.Add(Me.LabelPow)
         Me.Controls.Add(Me.PanelHideStandard)
         Me.Controls.Add(Me.txtBoxResultado)
-        Me.Controls.Add(Me.TableLayoutPanel1)
+        Me.Controls.Add(Me.TableLayoutPanelStandard)
         Me.Controls.Add(Me.MenuStrip)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.MainMenuStrip = Me.MenuStrip
         Me.Name = "Form1"
         Me.Text = "Calculadora by JotaMarti"
-        Me.TableLayoutPanel1.ResumeLayout(False)
-        Me.TableLayoutPanel1.PerformLayout()
+        Me.TableLayoutPanelStandard.ResumeLayout(False)
+        Me.TableLayoutPanelStandard.PerformLayout()
         Me.MenuStrip.ResumeLayout(False)
         Me.MenuStrip.PerformLayout()
         Me.PanelHideStandard.ResumeLayout(False)
@@ -902,7 +902,7 @@ Partial Class Form1
     End Sub
     Friend WithEvents txtBoxResultado As TextBox
     Friend WithEvents btnComa As Button
-    Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
+    Friend WithEvents TableLayoutPanelStandard As TableLayoutPanel
     Friend WithEvents btnIgual As Button
     Friend WithEvents btnC As Button
     Friend WithEvents btnCE As Button
