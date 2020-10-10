@@ -14,8 +14,6 @@
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-
-
         MenuStripStandard.Checked = True
         TableLayoutPanelScientific.Visible = False
         TableLayoutPanelStandard.Visible = True
@@ -77,6 +75,14 @@
 
         ' Esto es un check para cuando se concatenan operaciones, si damos varias veces al boton más por ejemplo no haga nada
         If numberEntered = False Then
+            Exit Sub
+        End If
+
+        If powY Then
+            operador1 = Math.Pow(Decimal.Parse(txtBoxResultado.Text), Integer.Parse(LabelPow.Text))
+            txtBoxResultado.Text = operador1
+            limpiaPantalla = True
+            hidePowY()
             Exit Sub
         End If
 
@@ -336,10 +342,15 @@
 
     Private Sub btnPowY_Click(sender As Object, e As EventArgs) Handles btnPowY.Click
 
+        If Not powY Then
+            txtBoxResultado.Text = txtBoxResultado.Text + "  "
+            powY = True
+            LabelPow.Visible = True
+        Else
+            hidePowY()
+            txtBoxResultado.Text = txtBoxResultado.Text.Trim()
+        End If
 
-        txtBoxResultado.Text = txtBoxResultado.Text + "  "
-        powY = True
-        LabelPow.Visible = True
 
     End Sub
 
@@ -350,13 +361,13 @@
     End Sub
 
     Private Sub btnFactorial_Click(sender As Object, e As EventArgs) Handles btnFactorial.Click
+        hidePowY()
 
         If txtBoxResultado.Text <> numeroCero Then
-            hidePowY()
 
-            Dim acumulado As Double = 1
+            Dim acumulado As Double = 1.0
 
-            For i As Double = 2 To Double.Parse(txtBoxResultado.Text)
+            For i As Double = 1.0 To Double.Parse(txtBoxResultado.Text)
 
                 acumulado = acumulado * i
 
@@ -365,7 +376,6 @@
             txtBoxResultado.Text = Math.Round(acumulado, 11)
         End If
 
-
-
     End Sub
+
 End Class
