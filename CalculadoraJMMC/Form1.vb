@@ -79,8 +79,13 @@
         End If
 
         If powY Then
-            operador1 = Math.Pow(Decimal.Parse(txtBoxResultado.Text), Integer.Parse(LabelPow.Text))
-            txtBoxResultado.Text = operador1
+            Try
+                operador1 = Math.Pow(Decimal.Parse(txtBoxResultado.Text), Integer.Parse(LabelPow.Text))
+                txtBoxResultado.Text = operador1
+            Catch ex As Exception
+                Console.WriteLine(ex.Message)
+            End Try
+
             limpiaPantalla = True
             hidePowY()
             Exit Sub
@@ -88,24 +93,26 @@
 
         ' Si el operador1 esta vacio y hemos escrito algo me guardo el valor, si no se ha escrito nada vuelvo a pintar el 0
         ' Y si todo es correcto llamo al sub del boton igual para realizar la operacion con el valor de la operacion anterior.
-        If operador1 Is Nothing AndAlso
-            txtBoxResultado.Text <> numeroCero Then
-            operador1 = Decimal.Parse(txtBoxResultado.Text)
-            limpiaPantalla = True
-        ElseIf operador1 Is Nothing AndAlso
-            txtBoxResultado.Text = numeroCero Then
-            txtBoxResultado.Text = numeroCero
-        ElseIf operador1 IsNot Nothing AndAlso
-                currentOperation.Text = btnPorcentaje.Text Then
-            btnIgual_Click(currentOperation, e)
-        Else
-            btnIgual_Click(previousOperation, e)
-        End If
 
+        Try
+            If operador1 Is Nothing AndAlso
+            txtBoxResultado.Text <> numeroCero Then
+                operador1 = Decimal.Parse(txtBoxResultado.Text)
+                limpiaPantalla = True
+            ElseIf operador1 Is Nothing AndAlso
+                txtBoxResultado.Text = numeroCero Then
+                txtBoxResultado.Text = numeroCero
+            ElseIf operador1 IsNot Nothing AndAlso
+                    currentOperation.Text = btnPorcentaje.Text Then
+                btnIgual_Click(currentOperation, e)
+            Else
+                btnIgual_Click(previousOperation, e)
+            End If
+        Catch ex As Exception
+            Console.WriteLine(ex.Message)
+        End Try
 
         btnClicked = TryCast(sender, Button)
-
-
 
     End Sub
 
@@ -329,14 +336,14 @@
     Private Sub btnPow2_Click(sender As Object, e As EventArgs) Handles btnPow2.Click
         hidePowY()
 
-        txtBoxResultado.Text = Math.Pow(Decimal.Parse(txtBoxResultado.Text), 2)
+        txtBoxResultado.Text = Math.Pow(Double.Parse(txtBoxResultado.Text), 2)
 
     End Sub
 
     Private Sub btnPow3_Click(sender As Object, e As EventArgs) Handles btnPow3.Click
         hidePowY()
 
-        txtBoxResultado.Text = Math.Pow(Decimal.Parse(txtBoxResultado.Text), 3)
+        txtBoxResultado.Text = Math.Pow(Double.Parse(txtBoxResultado.Text), 3)
 
     End Sub
 
@@ -367,13 +374,16 @@
 
             Dim acumulado As Double = 1.0
 
-            For i As Double = 1.0 To Double.Parse(txtBoxResultado.Text)
+            If txtBoxResultado.Text < 3200 Then
+                For i As Double = 1.0 To Double.Parse(txtBoxResultado.Text)
 
-                acumulado = acumulado * i
+                    acumulado = acumulado * i
 
-            Next i
+                Next i
 
-            txtBoxResultado.Text = Math.Round(acumulado, 11)
+                txtBoxResultado.Text = Math.Round(acumulado, 11)
+            End If
+
         End If
 
     End Sub
