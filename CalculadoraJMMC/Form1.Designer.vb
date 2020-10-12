@@ -22,7 +22,7 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.txtBoxResultado = New System.Windows.Forms.TextBox()
+        Me.txtBoxResult = New System.Windows.Forms.TextBox()
         Me.btnComa = New System.Windows.Forms.Button()
         Me.btnNum7 = New System.Windows.Forms.Button()
         Me.btnNum8 = New System.Windows.Forms.Button()
@@ -36,30 +36,32 @@ Partial Class Form1
         Me.btnNum2 = New System.Windows.Forms.Button()
         Me.btnNum3 = New System.Windows.Forms.Button()
         Me.btnRest = New System.Windows.Forms.Button()
-        Me.btnBorrar = New System.Windows.Forms.Button()
-        Me.btnMas = New System.Windows.Forms.Button()
+        Me.btnDelete = New System.Windows.Forms.Button()
+        Me.btnSum = New System.Windows.Forms.Button()
         Me.btnCE = New System.Windows.Forms.Button()
         Me.TableLayoutPanelStandard = New System.Windows.Forms.TableLayoutPanel()
-        Me.btnPorcentaje = New System.Windows.Forms.Button()
+        Me.btnPercentage = New System.Windows.Forms.Button()
         Me.btnNum0 = New System.Windows.Forms.Button()
-        Me.btnSigno = New System.Windows.Forms.Button()
-        Me.btnIgual = New System.Windows.Forms.Button()
+        Me.btnSign = New System.Windows.Forms.Button()
+        Me.btnEquals = New System.Windows.Forms.Button()
         Me.btnC = New System.Windows.Forms.Button()
-        Me.btnInversa = New System.Windows.Forms.Button()
+        Me.btnReverse = New System.Windows.Forms.Button()
         Me.MenuStrip = New System.Windows.Forms.MenuStrip()
-        Me.ModoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ModeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStripStandard = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStricScientific = New System.Windows.Forms.ToolStripMenuItem()
+        Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MenuStripViewHelp = New System.Windows.Forms.ToolStripMenuItem()
         Me.PanelHideStandard = New System.Windows.Forms.Panel()
         Me.TableLayoutPanelScientific = New System.Windows.Forms.TableLayoutPanel()
         Me.btnFactorial = New System.Windows.Forms.Button()
         Me.btnPowY = New System.Windows.Forms.Button()
         Me.btnPow3 = New System.Windows.Forms.Button()
         Me.btnPow2 = New System.Windows.Forms.Button()
-        Me.btnPorcentajeScientific = New System.Windows.Forms.Button()
+        Me.btnPercentageScientific = New System.Windows.Forms.Button()
         Me.btnNum0Scientific = New System.Windows.Forms.Button()
-        Me.btnSignoScientific = New System.Windows.Forms.Button()
-        Me.btnIgualScientific = New System.Windows.Forms.Button()
+        Me.btnSignScientific = New System.Windows.Forms.Button()
+        Me.btnEqualsScientific = New System.Windows.Forms.Button()
         Me.btnCScientific = New System.Windows.Forms.Button()
         Me.btnCEScientific = New System.Windows.Forms.Button()
         Me.btnSumScientific = New System.Windows.Forms.Button()
@@ -85,18 +87,18 @@ Partial Class Form1
         Me.TableLayoutPanelScientific.SuspendLayout()
         Me.SuspendLayout()
         '
-        'txtBoxResultado
+        'txtBoxResult
         '
-        Me.txtBoxResultado.Font = New System.Drawing.Font("Microsoft Sans Serif", 30.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtBoxResultado.Location = New System.Drawing.Point(3, 27)
-        Me.txtBoxResultado.MaxLength = 17
-        Me.txtBoxResultado.Name = "txtBoxResultado"
-        Me.txtBoxResultado.ReadOnly = True
-        Me.txtBoxResultado.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.txtBoxResultado.Size = New System.Drawing.Size(391, 53)
-        Me.txtBoxResultado.TabIndex = 1
-        Me.txtBoxResultado.Text = "0"
-        Me.txtBoxResultado.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        Me.txtBoxResult.Font = New System.Drawing.Font("Microsoft Sans Serif", 30.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtBoxResult.Location = New System.Drawing.Point(3, 27)
+        Me.txtBoxResult.MaxLength = 17
+        Me.txtBoxResult.Name = "txtBoxResult"
+        Me.txtBoxResult.ReadOnly = True
+        Me.txtBoxResult.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.txtBoxResult.Size = New System.Drawing.Size(391, 53)
+        Me.txtBoxResult.TabIndex = 1
+        Me.txtBoxResult.Text = "0"
+        Me.txtBoxResult.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'btnComa
         '
@@ -268,33 +270,33 @@ Partial Class Form1
         Me.btnRest.Text = "-"
         Me.btnRest.UseVisualStyleBackColor = False
         '
-        'btnBorrar
+        'btnDelete
         '
-        Me.btnBorrar.BackColor = System.Drawing.Color.Transparent
-        Me.btnBorrar.BackgroundImage = Global.CalculadoraJMMC.My.Resources.Resources.eliminar
-        Me.btnBorrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.btnBorrar.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.btnBorrar.FlatAppearance.BorderSize = 0
-        Me.btnBorrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnBorrar.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnBorrar.Location = New System.Drawing.Point(319, 3)
-        Me.btnBorrar.Name = "btnBorrar"
-        Me.btnBorrar.Size = New System.Drawing.Size(75, 74)
-        Me.btnBorrar.TabIndex = 14
-        Me.btnBorrar.UseVisualStyleBackColor = False
+        Me.btnDelete.BackColor = System.Drawing.Color.Transparent
+        Me.btnDelete.BackgroundImage = Global.CalculadoraJMMC.My.Resources.Resources.eliminar
+        Me.btnDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.btnDelete.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.btnDelete.FlatAppearance.BorderSize = 0
+        Me.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnDelete.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnDelete.Location = New System.Drawing.Point(319, 3)
+        Me.btnDelete.Name = "btnDelete"
+        Me.btnDelete.Size = New System.Drawing.Size(75, 74)
+        Me.btnDelete.TabIndex = 14
+        Me.btnDelete.UseVisualStyleBackColor = False
         '
-        'btnMas
+        'btnSum
         '
-        Me.btnMas.BackColor = System.Drawing.SystemColors.ControlDark
-        Me.btnMas.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.btnMas.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnMas.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnMas.Location = New System.Drawing.Point(240, 323)
-        Me.btnMas.Name = "btnMas"
-        Me.btnMas.Size = New System.Drawing.Size(73, 74)
-        Me.btnMas.TabIndex = 15
-        Me.btnMas.Text = "+"
-        Me.btnMas.UseVisualStyleBackColor = False
+        Me.btnSum.BackColor = System.Drawing.SystemColors.ControlDark
+        Me.btnSum.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.btnSum.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnSum.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSum.Location = New System.Drawing.Point(240, 323)
+        Me.btnSum.Name = "btnSum"
+        Me.btnSum.Size = New System.Drawing.Size(73, 74)
+        Me.btnSum.TabIndex = 15
+        Me.btnSum.Text = "+"
+        Me.btnSum.UseVisualStyleBackColor = False
         '
         'btnCE
         '
@@ -317,14 +319,14 @@ Partial Class Form1
         Me.TableLayoutPanelStandard.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
         Me.TableLayoutPanelStandard.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
         Me.TableLayoutPanelStandard.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
-        Me.TableLayoutPanelStandard.Controls.Add(Me.btnPorcentaje, 0, 0)
+        Me.TableLayoutPanelStandard.Controls.Add(Me.btnPercentage, 0, 0)
         Me.TableLayoutPanelStandard.Controls.Add(Me.btnNum0, 1, 4)
-        Me.TableLayoutPanelStandard.Controls.Add(Me.btnSigno, 0, 4)
-        Me.TableLayoutPanelStandard.Controls.Add(Me.btnIgual, 4, 3)
+        Me.TableLayoutPanelStandard.Controls.Add(Me.btnSign, 0, 4)
+        Me.TableLayoutPanelStandard.Controls.Add(Me.btnEquals, 4, 3)
         Me.TableLayoutPanelStandard.Controls.Add(Me.btnC, 4, 2)
         Me.TableLayoutPanelStandard.Controls.Add(Me.btnCE, 4, 1)
-        Me.TableLayoutPanelStandard.Controls.Add(Me.btnMas, 3, 4)
-        Me.TableLayoutPanelStandard.Controls.Add(Me.btnBorrar, 4, 0)
+        Me.TableLayoutPanelStandard.Controls.Add(Me.btnSum, 3, 4)
+        Me.TableLayoutPanelStandard.Controls.Add(Me.btnDelete, 4, 0)
         Me.TableLayoutPanelStandard.Controls.Add(Me.btnRest, 3, 3)
         Me.TableLayoutPanelStandard.Controls.Add(Me.btnNum3, 2, 3)
         Me.TableLayoutPanelStandard.Controls.Add(Me.btnNum2, 1, 3)
@@ -338,7 +340,7 @@ Partial Class Form1
         Me.TableLayoutPanelStandard.Controls.Add(Me.btnNum8, 1, 1)
         Me.TableLayoutPanelStandard.Controls.Add(Me.btnNum7, 0, 1)
         Me.TableLayoutPanelStandard.Controls.Add(Me.btnComa, 2, 4)
-        Me.TableLayoutPanelStandard.Controls.Add(Me.btnInversa, 2, 0)
+        Me.TableLayoutPanelStandard.Controls.Add(Me.btnReverse, 2, 0)
         Me.TableLayoutPanelStandard.Location = New System.Drawing.Point(0, 86)
         Me.TableLayoutPanelStandard.Name = "TableLayoutPanelStandard"
         Me.TableLayoutPanelStandard.RowCount = 5
@@ -351,19 +353,19 @@ Partial Class Form1
         Me.TableLayoutPanelStandard.Size = New System.Drawing.Size(397, 397)
         Me.TableLayoutPanelStandard.TabIndex = 0
         '
-        'btnPorcentaje
+        'btnPercentage
         '
-        Me.btnPorcentaje.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.btnPorcentaje.BackColor = System.Drawing.Color.Transparent
-        Me.TableLayoutPanelStandard.SetColumnSpan(Me.btnPorcentaje, 2)
-        Me.btnPorcentaje.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnPorcentaje.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnPorcentaje.Location = New System.Drawing.Point(3, 14)
-        Me.btnPorcentaje.Name = "btnPorcentaje"
-        Me.btnPorcentaje.Size = New System.Drawing.Size(152, 51)
-        Me.btnPorcentaje.TabIndex = 21
-        Me.btnPorcentaje.Text = "%"
-        Me.btnPorcentaje.UseVisualStyleBackColor = False
+        Me.btnPercentage.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.btnPercentage.BackColor = System.Drawing.Color.Transparent
+        Me.TableLayoutPanelStandard.SetColumnSpan(Me.btnPercentage, 2)
+        Me.btnPercentage.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnPercentage.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnPercentage.Location = New System.Drawing.Point(3, 14)
+        Me.btnPercentage.Name = "btnPercentage"
+        Me.btnPercentage.Size = New System.Drawing.Size(152, 51)
+        Me.btnPercentage.TabIndex = 21
+        Me.btnPercentage.Text = "%"
+        Me.btnPercentage.UseVisualStyleBackColor = False
         '
         'btnNum0
         '
@@ -379,33 +381,33 @@ Partial Class Form1
         Me.btnNum0.Text = "0"
         Me.btnNum0.UseVisualStyleBackColor = False
         '
-        'btnSigno
+        'btnSign
         '
-        Me.btnSigno.AutoSize = True
-        Me.btnSigno.BackColor = System.Drawing.SystemColors.ScrollBar
-        Me.btnSigno.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.btnSigno.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnSigno.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSigno.Location = New System.Drawing.Point(3, 323)
-        Me.btnSigno.Name = "btnSigno"
-        Me.btnSigno.Size = New System.Drawing.Size(73, 74)
-        Me.btnSigno.TabIndex = 19
-        Me.btnSigno.Text = "+/-"
-        Me.btnSigno.UseVisualStyleBackColor = False
+        Me.btnSign.AutoSize = True
+        Me.btnSign.BackColor = System.Drawing.SystemColors.ScrollBar
+        Me.btnSign.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.btnSign.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnSign.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSign.Location = New System.Drawing.Point(3, 323)
+        Me.btnSign.Name = "btnSign"
+        Me.btnSign.Size = New System.Drawing.Size(73, 74)
+        Me.btnSign.TabIndex = 19
+        Me.btnSign.Text = "+/-"
+        Me.btnSign.UseVisualStyleBackColor = False
         '
-        'btnIgual
+        'btnEquals
         '
-        Me.btnIgual.BackColor = System.Drawing.Color.FromArgb(CType(CType(33, Byte), Integer), CType(CType(149, Byte), Integer), CType(CType(242, Byte), Integer))
-        Me.btnIgual.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.btnIgual.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnIgual.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnIgual.Location = New System.Drawing.Point(319, 243)
-        Me.btnIgual.Name = "btnIgual"
-        Me.TableLayoutPanelStandard.SetRowSpan(Me.btnIgual, 2)
-        Me.btnIgual.Size = New System.Drawing.Size(75, 154)
-        Me.btnIgual.TabIndex = 18
-        Me.btnIgual.Text = "="
-        Me.btnIgual.UseVisualStyleBackColor = False
+        Me.btnEquals.BackColor = System.Drawing.Color.FromArgb(CType(CType(33, Byte), Integer), CType(CType(149, Byte), Integer), CType(CType(242, Byte), Integer))
+        Me.btnEquals.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.btnEquals.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnEquals.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnEquals.Location = New System.Drawing.Point(319, 243)
+        Me.btnEquals.Name = "btnEquals"
+        Me.TableLayoutPanelStandard.SetRowSpan(Me.btnEquals, 2)
+        Me.btnEquals.Size = New System.Drawing.Size(75, 154)
+        Me.btnEquals.TabIndex = 18
+        Me.btnEquals.Text = "="
+        Me.btnEquals.UseVisualStyleBackColor = False
         '
         'btnC
         '
@@ -420,47 +422,60 @@ Partial Class Form1
         Me.btnC.Text = "C"
         Me.btnC.UseVisualStyleBackColor = False
         '
-        'btnInversa
+        'btnReverse
         '
-        Me.btnInversa.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.btnInversa.BackColor = System.Drawing.Color.Transparent
-        Me.TableLayoutPanelStandard.SetColumnSpan(Me.btnInversa, 2)
-        Me.btnInversa.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnInversa.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnInversa.Location = New System.Drawing.Point(161, 14)
-        Me.btnInversa.Name = "btnInversa"
-        Me.btnInversa.Size = New System.Drawing.Size(152, 51)
-        Me.btnInversa.TabIndex = 22
-        Me.btnInversa.Text = "1/x"
-        Me.btnInversa.UseVisualStyleBackColor = False
+        Me.btnReverse.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.btnReverse.BackColor = System.Drawing.Color.Transparent
+        Me.TableLayoutPanelStandard.SetColumnSpan(Me.btnReverse, 2)
+        Me.btnReverse.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnReverse.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnReverse.Location = New System.Drawing.Point(161, 14)
+        Me.btnReverse.Name = "btnReverse"
+        Me.btnReverse.Size = New System.Drawing.Size(152, 51)
+        Me.btnReverse.TabIndex = 22
+        Me.btnReverse.Text = "1/x"
+        Me.btnReverse.UseVisualStyleBackColor = False
         '
         'MenuStrip
         '
-        Me.MenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ModoToolStripMenuItem})
+        Me.MenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ModeToolStripMenuItem, Me.HelpToolStripMenuItem})
         Me.MenuStrip.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip.Name = "MenuStrip"
         Me.MenuStrip.Size = New System.Drawing.Size(396, 24)
         Me.MenuStrip.TabIndex = 2
         Me.MenuStrip.Text = "MenuStrip1"
         '
-        'ModoToolStripMenuItem
+        'ModeToolStripMenuItem
         '
-        Me.ModoToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MenuStripStandard, Me.MenuStricScientific})
-        Me.ModoToolStripMenuItem.Name = "ModoToolStripMenuItem"
-        Me.ModoToolStripMenuItem.Size = New System.Drawing.Size(44, 20)
-        Me.ModoToolStripMenuItem.Text = "View"
+        Me.ModeToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MenuStripStandard, Me.MenuStricScientific})
+        Me.ModeToolStripMenuItem.Name = "ModeToolStripMenuItem"
+        Me.ModeToolStripMenuItem.Size = New System.Drawing.Size(44, 20)
+        Me.ModeToolStripMenuItem.Text = "View"
         '
         'MenuStripStandard
         '
         Me.MenuStripStandard.Name = "MenuStripStandard"
-        Me.MenuStripStandard.Size = New System.Drawing.Size(122, 22)
+        Me.MenuStripStandard.Size = New System.Drawing.Size(152, 22)
         Me.MenuStripStandard.Text = "Standard"
         '
         'MenuStricScientific
         '
         Me.MenuStricScientific.Name = "MenuStricScientific"
-        Me.MenuStricScientific.Size = New System.Drawing.Size(122, 22)
+        Me.MenuStricScientific.Size = New System.Drawing.Size(152, 22)
         Me.MenuStricScientific.Text = "Scientific"
+        '
+        'HelpToolStripMenuItem
+        '
+        Me.HelpToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MenuStripViewHelp})
+        Me.HelpToolStripMenuItem.Name = "HelpToolStripMenuItem"
+        Me.HelpToolStripMenuItem.Size = New System.Drawing.Size(44, 20)
+        Me.HelpToolStripMenuItem.Text = "Help"
+        '
+        'MenuStripViewHelp
+        '
+        Me.MenuStripViewHelp.Name = "MenuStripViewHelp"
+        Me.MenuStripViewHelp.Size = New System.Drawing.Size(127, 22)
+        Me.MenuStripViewHelp.Text = "View Help"
         '
         'PanelHideStandard
         '
@@ -482,10 +497,10 @@ Partial Class Form1
         Me.TableLayoutPanelScientific.Controls.Add(Me.btnPowY, 2, 1)
         Me.TableLayoutPanelScientific.Controls.Add(Me.btnPow3, 1, 1)
         Me.TableLayoutPanelScientific.Controls.Add(Me.btnPow2, 0, 1)
-        Me.TableLayoutPanelScientific.Controls.Add(Me.btnPorcentajeScientific, 0, 0)
+        Me.TableLayoutPanelScientific.Controls.Add(Me.btnPercentageScientific, 0, 0)
         Me.TableLayoutPanelScientific.Controls.Add(Me.btnNum0Scientific, 1, 5)
-        Me.TableLayoutPanelScientific.Controls.Add(Me.btnSignoScientific, 0, 5)
-        Me.TableLayoutPanelScientific.Controls.Add(Me.btnIgualScientific, 4, 4)
+        Me.TableLayoutPanelScientific.Controls.Add(Me.btnSignScientific, 0, 5)
+        Me.TableLayoutPanelScientific.Controls.Add(Me.btnEqualsScientific, 4, 4)
         Me.TableLayoutPanelScientific.Controls.Add(Me.btnCScientific, 4, 3)
         Me.TableLayoutPanelScientific.Controls.Add(Me.btnCEScientific, 4, 2)
         Me.TableLayoutPanelScientific.Controls.Add(Me.btnSumScientific, 3, 5)
@@ -570,19 +585,19 @@ Partial Class Form1
         Me.btnPow2.Text = "x²"
         Me.btnPow2.UseVisualStyleBackColor = False
         '
-        'btnPorcentajeScientific
+        'btnPercentageScientific
         '
-        Me.btnPorcentajeScientific.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.btnPorcentajeScientific.BackColor = System.Drawing.Color.Transparent
-        Me.TableLayoutPanelScientific.SetColumnSpan(Me.btnPorcentajeScientific, 2)
-        Me.btnPorcentajeScientific.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnPorcentajeScientific.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnPorcentajeScientific.Location = New System.Drawing.Point(3, 7)
-        Me.btnPorcentajeScientific.Name = "btnPorcentajeScientific"
-        Me.btnPorcentajeScientific.Size = New System.Drawing.Size(152, 51)
-        Me.btnPorcentajeScientific.TabIndex = 21
-        Me.btnPorcentajeScientific.Text = "%"
-        Me.btnPorcentajeScientific.UseVisualStyleBackColor = False
+        Me.btnPercentageScientific.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.btnPercentageScientific.BackColor = System.Drawing.Color.Transparent
+        Me.TableLayoutPanelScientific.SetColumnSpan(Me.btnPercentageScientific, 2)
+        Me.btnPercentageScientific.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnPercentageScientific.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnPercentageScientific.Location = New System.Drawing.Point(3, 7)
+        Me.btnPercentageScientific.Name = "btnPercentageScientific"
+        Me.btnPercentageScientific.Size = New System.Drawing.Size(152, 51)
+        Me.btnPercentageScientific.TabIndex = 21
+        Me.btnPercentageScientific.Text = "%"
+        Me.btnPercentageScientific.UseVisualStyleBackColor = False
         '
         'btnNum0Scientific
         '
@@ -598,33 +613,33 @@ Partial Class Form1
         Me.btnNum0Scientific.Text = "0"
         Me.btnNum0Scientific.UseVisualStyleBackColor = False
         '
-        'btnSignoScientific
+        'btnSignScientific
         '
-        Me.btnSignoScientific.AutoSize = True
-        Me.btnSignoScientific.BackColor = System.Drawing.SystemColors.ScrollBar
-        Me.btnSignoScientific.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.btnSignoScientific.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnSignoScientific.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSignoScientific.Location = New System.Drawing.Point(3, 328)
-        Me.btnSignoScientific.Name = "btnSignoScientific"
-        Me.btnSignoScientific.Size = New System.Drawing.Size(73, 66)
-        Me.btnSignoScientific.TabIndex = 19
-        Me.btnSignoScientific.Text = "+/-"
-        Me.btnSignoScientific.UseVisualStyleBackColor = False
+        Me.btnSignScientific.AutoSize = True
+        Me.btnSignScientific.BackColor = System.Drawing.SystemColors.ScrollBar
+        Me.btnSignScientific.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.btnSignScientific.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnSignScientific.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSignScientific.Location = New System.Drawing.Point(3, 328)
+        Me.btnSignScientific.Name = "btnSignScientific"
+        Me.btnSignScientific.Size = New System.Drawing.Size(73, 66)
+        Me.btnSignScientific.TabIndex = 19
+        Me.btnSignScientific.Text = "+/-"
+        Me.btnSignScientific.UseVisualStyleBackColor = False
         '
-        'btnIgualScientific
+        'btnEqualsScientific
         '
-        Me.btnIgualScientific.BackColor = System.Drawing.Color.FromArgb(CType(CType(33, Byte), Integer), CType(CType(149, Byte), Integer), CType(CType(242, Byte), Integer))
-        Me.btnIgualScientific.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.btnIgualScientific.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnIgualScientific.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnIgualScientific.Location = New System.Drawing.Point(319, 263)
-        Me.btnIgualScientific.Name = "btnIgualScientific"
-        Me.TableLayoutPanelScientific.SetRowSpan(Me.btnIgualScientific, 2)
-        Me.btnIgualScientific.Size = New System.Drawing.Size(75, 131)
-        Me.btnIgualScientific.TabIndex = 18
-        Me.btnIgualScientific.Text = "="
-        Me.btnIgualScientific.UseVisualStyleBackColor = False
+        Me.btnEqualsScientific.BackColor = System.Drawing.Color.FromArgb(CType(CType(33, Byte), Integer), CType(CType(149, Byte), Integer), CType(CType(242, Byte), Integer))
+        Me.btnEqualsScientific.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.btnEqualsScientific.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnEqualsScientific.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnEqualsScientific.Location = New System.Drawing.Point(319, 263)
+        Me.btnEqualsScientific.Name = "btnEqualsScientific"
+        Me.TableLayoutPanelScientific.SetRowSpan(Me.btnEqualsScientific, 2)
+        Me.btnEqualsScientific.Size = New System.Drawing.Size(75, 131)
+        Me.btnEqualsScientific.TabIndex = 18
+        Me.btnEqualsScientific.Text = "="
+        Me.btnEqualsScientific.UseVisualStyleBackColor = False
         '
         'btnCScientific
         '
@@ -882,13 +897,14 @@ Partial Class Form1
         Me.ClientSize = New System.Drawing.Size(396, 486)
         Me.Controls.Add(Me.LabelPow)
         Me.Controls.Add(Me.PanelHideStandard)
-        Me.Controls.Add(Me.txtBoxResultado)
+        Me.Controls.Add(Me.txtBoxResult)
         Me.Controls.Add(Me.TableLayoutPanelStandard)
         Me.Controls.Add(Me.MenuStrip)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.MainMenuStrip = Me.MenuStrip
+        Me.MaximizeBox = False
         Me.Name = "Form1"
-        Me.Text = "Calculadora by JotaMarti"
+        Me.Text = "Calculator by JotaMarti"
         Me.TableLayoutPanelStandard.ResumeLayout(False)
         Me.TableLayoutPanelStandard.PerformLayout()
         Me.MenuStrip.ResumeLayout(False)
@@ -900,14 +916,14 @@ Partial Class Form1
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents txtBoxResultado As TextBox
+    Friend WithEvents txtBoxResult As TextBox
     Friend WithEvents btnComa As Button
     Friend WithEvents TableLayoutPanelStandard As TableLayoutPanel
-    Friend WithEvents btnIgual As Button
+    Friend WithEvents btnEquals As Button
     Friend WithEvents btnC As Button
     Friend WithEvents btnCE As Button
-    Friend WithEvents btnMas As Button
-    Friend WithEvents btnBorrar As Button
+    Friend WithEvents btnSum As Button
+    Friend WithEvents btnDelete As Button
     Friend WithEvents btnRest As Button
     Friend WithEvents btnNum3 As Button
     Friend WithEvents btnNum2 As Button
@@ -921,19 +937,19 @@ Partial Class Form1
     Friend WithEvents btnNum8 As Button
     Friend WithEvents btnNum7 As Button
     Friend WithEvents btnNum0 As Button
-    Friend WithEvents btnSigno As Button
-    Friend WithEvents btnInversa As Button
-    Friend WithEvents btnPorcentaje As Button
+    Friend WithEvents btnSign As Button
+    Friend WithEvents btnReverse As Button
+    Friend WithEvents btnPercentage As Button
     Friend WithEvents MenuStrip As MenuStrip
-    Friend WithEvents ModoToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ModeToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents MenuStripStandard As ToolStripMenuItem
     Friend WithEvents MenuStricScientific As ToolStripMenuItem
     Friend WithEvents PanelHideStandard As Panel
     Friend WithEvents TableLayoutPanelScientific As TableLayoutPanel
-    Friend WithEvents btnPorcentajeScientific As Button
+    Friend WithEvents btnPercentageScientific As Button
     Friend WithEvents btnNum0Scientific As Button
-    Friend WithEvents btnSignoScientific As Button
-    Friend WithEvents btnIgualScientific As Button
+    Friend WithEvents btnSignScientific As Button
+    Friend WithEvents btnEqualsScientific As Button
     Friend WithEvents btnCScientific As Button
     Friend WithEvents btnCEScientific As Button
     Friend WithEvents btnSumScientific As Button
@@ -957,4 +973,6 @@ Partial Class Form1
     Friend WithEvents btnPow3 As Button
     Friend WithEvents btnPow2 As Button
     Friend WithEvents LabelPow As Label
+    Friend WithEvents HelpToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents MenuStripViewHelp As ToolStripMenuItem
 End Class

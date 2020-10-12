@@ -1,15 +1,15 @@
 ﻿Public Class Form1
 
-    Dim operador1? As Decimal
-    Dim operador2? As Decimal
+    Dim operator1? As Decimal
+    Dim operator2? As Decimal
     Dim btnClicked As Button
     Dim previousOperation As Button
     Dim currentOperation As Button
-    Dim limpiaPantalla As Boolean = False
+    Dim cleanScreen As Boolean = False
     Dim numberEntered As Boolean = False
     Dim maxLenght As Integer = 16
     Dim empty As String = ""
-    Dim numeroCero As String = "0"
+    Dim numberZero As String = "0"
     Dim powY As Boolean = False
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -20,18 +20,19 @@
         PanelHideStandard.Visible = False
 
         hidePowY()
+        centerForm()
 
     End Sub
 
 
     Private Sub btnNum_Click(sender As Object, e As EventArgs) Handles btnNum0.Click, btnNum1.Click, btnNum9.Click, btnNum8.Click, btnNum7.Click, btnNum6.Click, btnNum5.Click, btnNum4.Click, btnNum3.Click, btnNum2.Click, btnNum9Scientific.Click, btnNum8Scientific.Click, btnNum7Scientific.Click, btnNum6Scientific.Click, btnNum5Scientific.Click, btnNum4Scientific.Click, btnNum3Scientific.Click, btnNum2Scientific.Click, btnNum1Scientific.Click, btnNum0Scientific.Click
 
-        If limpiaPantalla = True AndAlso
+        If cleanScreen = True AndAlso
             btnClicked.Text <> "," Then
             cleanTxtBox()
         End If
 
-        btnClicked = TryCast(sender, Button)
+        btnClicked = sender
 
         ' Si he seleccionado la potencia de y me quedo aqui capturando los numeros y el programa no sigue
         If powY Then
@@ -44,26 +45,26 @@
 
         ' Con esto no añado más numeros si ha superado el largo máximo, en este caso he puesto 16
         ' También realizo varias comprobaciones para no poner ceros a la izquierda
-        If txtBoxResultado.Text.Length < maxLenght Then
+        If txtBoxResult.Text.Length < maxLenght Then
             If btnClicked.Text = btnNum0.Text Then
-                If txtBoxResultado.Text = numeroCero Or
-                    txtBoxResultado.Text = empty Then
-                    txtBoxResultado.Text = numeroCero
+                If txtBoxResult.Text = numberZero Or
+                    txtBoxResult.Text = empty Then
+                    txtBoxResult.Text = numberZero
                 Else
-                    txtBoxResultado.Text = txtBoxResultado.Text & btnClicked.Text
+                    txtBoxResult.Text = txtBoxResult.Text & btnClicked.Text
                 End If
             Else
-                If txtBoxResultado.Text = numeroCero Then
-                    txtBoxResultado.Text = empty
+                If txtBoxResult.Text = numberZero Then
+                    txtBoxResult.Text = empty
                 End If
-                txtBoxResultado.Text = txtBoxResultado.Text & btnClicked.Text
+                txtBoxResult.Text = txtBoxResult.Text & btnClicked.Text
                 numberEntered = True
             End If
         End If
 
     End Sub
 
-    Private Sub btnOperation_Click(sender As Object, e As EventArgs) Handles btnMas.Click, btnMult.Click, btnRest.Click, btnDiv.Click, btnPorcentaje.Click, btnSumScientific.Click, btnRestScientific.Click, btnPorcentajeScientific.Click, btnMultScientific.Click, btnDivScientific.Click
+    Private Sub btnOperation_Click(sender As Object, e As EventArgs) Handles btnSum.Click, btnMult.Click, btnRest.Click, btnDiv.Click, btnPercentage.Click, btnSumScientific.Click, btnRestScientific.Click, btnPercentageScientific.Click, btnMultScientific.Click, btnDivScientific.Click
 
         ' Si la operacion actual no es nula me guardo la operacion anterior
         If currentOperation IsNot Nothing Then
@@ -71,22 +72,23 @@
         End If
 
         ' Me guardo la operacion actual
-        currentOperation = TryCast(sender, Button)
+        currentOperation = sender
 
         ' Esto es un check para cuando se concatenan operaciones, si damos varias veces al boton más por ejemplo no haga nada
         If numberEntered = False Then
             Exit Sub
         End If
 
+        ' Para manejar las potencias cuando concatenamos operaciones
         If powY Then
             Try
-                operador1 = Math.Pow(Decimal.Parse(txtBoxResultado.Text), Integer.Parse(LabelPow.Text))
-                txtBoxResultado.Text = operador1
+                operator1 = Math.Pow(Decimal.Parse(txtBoxResult.Text), Integer.Parse(LabelPow.Text))
+                txtBoxResult.Text = operator1
             Catch ex As Exception
                 Console.WriteLine(ex.Message)
             End Try
 
-            limpiaPantalla = True
+            cleanScreen = True
             hidePowY()
             Exit Sub
         End If
@@ -95,15 +97,15 @@
         ' Y si todo es correcto llamo al sub del boton igual para realizar la operacion con el valor de la operacion anterior.
 
         Try
-            If operador1 Is Nothing AndAlso
-            txtBoxResultado.Text <> numeroCero Then
-                operador1 = Decimal.Parse(txtBoxResultado.Text)
-                limpiaPantalla = True
-            ElseIf operador1 Is Nothing AndAlso
-                txtBoxResultado.Text = numeroCero Then
-                txtBoxResultado.Text = numeroCero
-            ElseIf operador1 IsNot Nothing AndAlso
-                    currentOperation.Text = btnPorcentaje.Text Then
+            If operator1 Is Nothing AndAlso
+            txtBoxResult.Text <> numberZero Then
+                operator1 = Decimal.Parse(txtBoxResult.Text)
+                cleanScreen = True
+            ElseIf operator1 Is Nothing AndAlso
+                txtBoxResult.Text = numberZero Then
+                txtBoxResult.Text = numberZero
+            ElseIf operator1 IsNot Nothing AndAlso
+                    currentOperation.Text = btnPercentage.Text Then
                 btnIgual_Click(currentOperation, e)
             Else
                 btnIgual_Click(previousOperation, e)
@@ -112,94 +114,95 @@
             Console.WriteLine(ex.Message)
         End Try
 
-        btnClicked = TryCast(sender, Button)
+        btnClicked = sender
 
     End Sub
 
-    Private Sub btnIgual_Click(sender As Object, e As EventArgs) Handles btnIgual.Click, btnIgualScientific.Click
+    Private Sub btnIgual_Click(sender As Object, e As EventArgs) Handles btnEquals.Click, btnEqualsScientific.Click
 
-        Dim buttonOrigin As Button
+        If numberEntered = False Then
+            Exit Sub
+        End If
 
-        buttonOrigin = TryCast(sender, Button)
-
-        Dim resultado As Decimal
+        Dim result As Decimal
 
         ' Si tenemos operador1 guardamos operador2 y depende de si le hemos pulsado en igual o en los operador realizo dos cosas distintas
-        If operador1 IsNot Nothing Then
+        If operator1 IsNot Nothing Then
 
             ' Si he seleccionado la potencia de Y cuando le doy a igual primero chequeo que tengo numeros en la potencia
             ' Si tengo numeros hago la potencia y la uso como operador dos, si no tengo uso el numero principal como operador 2
             If powY Then
                 If LabelPow.Text.Length > 0 Then
-                    operador2 = Math.Pow(Decimal.Parse(txtBoxResultado.Text), Integer.Parse(LabelPow.Text))
+                    operator2 = Math.Pow(Decimal.Parse(txtBoxResult.Text), Integer.Parse(LabelPow.Text))
                 Else
-                    operador2 = Decimal.Parse(txtBoxResultado.Text)
+                    operator2 = Decimal.Parse(txtBoxResult.Text)
                 End If
             Else
-                operador2 = Decimal.Parse(txtBoxResultado.Text)
+                operator2 = Decimal.Parse(txtBoxResult.Text)
             End If
 
-            If buttonOrigin.Text = btnIgual.Text Then
-                resultado = makeOperation(operador1, operador2, currentOperation.Text)
-                txtBoxResultado.Text = Math.Round(resultado, 15)
-                limpiaPantalla = True
-                operador1 = Nothing
-                operador2 = Nothing
+            If sender.Text = btnEquals.Text Then
+                result = makeOperation(operator1, operator2, currentOperation.Text)
+                txtBoxResult.Text = Math.Round(result, 15)
+                cleanScreen = True
+                operator1 = Nothing
+                operator2 = Nothing
                 hidePowY()
             Else
-                resultado = makeOperation(operador1, operador2, buttonOrigin.Text)
-                txtBoxResultado.Text = Math.Round(resultado, 15)
-                limpiaPantalla = True
-                operador1 = resultado
+                result = makeOperation(operator1, operator2, sender.Text)
+                txtBoxResult.Text = Math.Round(result, 15)
+                cleanScreen = True
+                operator1 = result
                 numberEntered = False
                 hidePowY()
             End If
         End If
 
-        btnClicked = TryCast(sender, Button)
+        btnClicked = sender
 
 
         ' Aqui solo entro si hago la potencia como primera operacion y le doy a igual
         If powY Then
             If LabelPow.Text.Length > 0 Then
-                txtBoxResultado.Text = Math.Pow(Decimal.Parse(txtBoxResultado.Text), Integer.Parse(LabelPow.Text))
+                txtBoxResult.Text = Math.Pow(Decimal.Parse(txtBoxResult.Text), Integer.Parse(LabelPow.Text))
             End If
             hidePowY()
-            txtBoxResultado.Text = txtBoxResultado.Text.Trim()
+            txtBoxResult.Text = txtBoxResult.Text.Trim()
         End If
 
     End Sub
 
     Private Function makeOperation(op1 As Decimal, op2 As Decimal, sender As String)
 
-        Dim Resultado As Decimal
+        Dim result As Decimal
 
         Select Case sender
-            Case btnMas.Text
-                Resultado = op1 + op2
+            Case btnSum.Text
+                result = op1 + op2
             Case btnRest.Text
-                Resultado = op1 - op2
+                result = op1 - op2
             Case btnMult.Text
-                Resultado = op1 * op2
+                result = op1 * op2
             Case btnDiv.Text
-                Resultado = op1 / op2
-            Case btnPorcentaje.Text
+                result = op1 / op2
+            Case btnPercentage.Text
                 Select Case previousOperation.Text
                     Case btnRest.Text
-                        Resultado = op1 - (op1 * (op2 / 100.0))
-                    Case btnMas.Text
-                        Resultado = op1 + (op1 * (op2 / 100.0))
+                        result = op1 - (op1 * (op2 / 100.0))
+                    Case btnSum.Text
+                        result = op1 + (op1 * (op2 / 100.0))
                     Case btnMult.Text
-                        Resultado = op1 * (op2 / 100.0)
+                        result = op1 * (op2 / 100.0)
                 End Select
         End Select
 
-        Return Resultado
+        Return result
 
     End Function
 
-    Private Sub btnBorrar_Click(sender As Object, e As EventArgs) Handles btnBorrar.Click, btnBorrarScientific.Click
+    Private Sub btnBorrar_Click(sender As Object, e As EventArgs) Handles btnDelete.Click, btnBorrarScientific.Click
 
+        ' Cuando estemos introduciendo numeros en el pow de Y, el boton de borrar solo funcionara para estos numeros
         If powY Then
             If LabelPow.Text.Length >= 1 Then
                 LabelPow.Text = LabelPow.Text.Substring(0, LabelPow.Text.Length - 1)
@@ -209,26 +212,26 @@
 
         ' En el primer if realizo una comprobación, por que cuando el numero tenia coma se quedaba por ej 3, y generaba problemas,
         ' lo que hago es comprobar si lo siguiente a borrar es un coma y en ese caso borro el numero y la coma
-        If txtBoxResultado.Text.Length > 1 Then
+        If txtBoxResult.Text.Length > 1 Then
             Dim esComa As Char
 
-            esComa = txtBoxResultado.Text.Chars(txtBoxResultado.Text.Length - 2)
+            esComa = txtBoxResult.Text.Chars(txtBoxResult.Text.Length - 2)
 
             If esComa = "," Then
-                txtBoxResultado.Text = txtBoxResultado.Text.Substring(0, txtBoxResultado.Text.Length - 2)
+                txtBoxResult.Text = txtBoxResult.Text.Substring(0, txtBoxResult.Text.Length - 2)
             Else
-                txtBoxResultado.Text = txtBoxResultado.Text.Substring(0, txtBoxResultado.Text.Length - 1)
+                txtBoxResult.Text = txtBoxResult.Text.Substring(0, txtBoxResult.Text.Length - 1)
             End If
 
-        ElseIf txtBoxResultado.Text.Length = 0 Then
-            txtBoxResultado.Text = numeroCero
-            limpiaPantalla = True
-        ElseIf txtBoxResultado.Text.Length = 1 Then
-            txtBoxResultado.Text = numeroCero
-            limpiaPantalla = True
+        ElseIf txtBoxResult.Text.Length = 0 Then
+            txtBoxResult.Text = numberZero
+            cleanScreen = True
+        ElseIf txtBoxResult.Text.Length = 1 Then
+            txtBoxResult.Text = numberZero
+            cleanScreen = True
         End If
 
-        btnClicked = TryCast(sender, Button)
+        btnClicked = sender
 
     End Sub
 
@@ -236,49 +239,45 @@
 
         hidePowY()
 
-        txtBoxResultado.Text = numeroCero
-        limpiaPantalla = False
+        txtBoxResult.Text = numberZero
+        cleanScreen = False
 
-        operador1 = Nothing
-        operador2 = Nothing
+        operator1 = Nothing
+        operator2 = Nothing
 
     End Sub
 
     Private Sub btnCE_Click(sender As Object, e As EventArgs) Handles btnCE.Click, btnCEScientific.Click
 
         hidePowY()
-
-        txtBoxResultado.Text = numeroCero
-        limpiaPantalla = True
-
-        btnClicked = TryCast(sender, Button)
-
+        txtBoxResult.Text = numberZero
+        cleanScreen = True
 
     End Sub
 
     Private Sub cleanTxtBox()
 
-        If txtBoxResultado.Text <> numeroCero Then
-            operador1 = Decimal.Parse(txtBoxResultado.Text)
+        If txtBoxResult.Text <> numberZero Then
+            operator1 = Decimal.Parse(txtBoxResult.Text)
         End If
-        txtBoxResultado.Text = ""
-        limpiaPantalla = False
+        txtBoxResult.Text = ""
+        cleanScreen = False
         hidePowY()
 
     End Sub
 
-    Private Sub btnSigno_Click(sender As Object, e As EventArgs) Handles btnSigno.Click, btnSignoScientific.Click
+    Private Sub btnSigno_Click(sender As Object, e As EventArgs) Handles btnSign.Click, btnSignScientific.Click
 
         hidePowY()
 
         ' Si el textBox no tiene solo un numero 0 y si ademas no tiene un signo negativa le pongo el signo negativo al principio del string
         ' Si el textBox ya tiene un signo negativo lo quito al pulsar el boton
-        If txtBoxResultado.Text <> numeroCero AndAlso
-            Not txtBoxResultado.Text.Contains("-") Then
+        If txtBoxResult.Text <> numberZero AndAlso
+            Not txtBoxResult.Text.Contains("-") Then
 
-            txtBoxResultado.Text = "-" + txtBoxResultado.Text
+            txtBoxResult.Text = "-" + txtBoxResult.Text
         Else
-            txtBoxResultado.Text = txtBoxResultado.Text.Replace("-", "")
+            txtBoxResult.Text = txtBoxResult.Text.Replace("-", "")
         End If
 
     End Sub
@@ -287,22 +286,20 @@
 
         hidePowY()
 
-        btnClicked = TryCast(sender, Button)
-
-        If Not txtBoxResultado.Text.Contains(",") Then
-            txtBoxResultado.Text = txtBoxResultado.Text + ","
+        If Not txtBoxResult.Text.Contains(",") Then
+            txtBoxResult.Text = txtBoxResult.Text + ","
         End If
 
 
 
     End Sub
 
-    Private Sub btnInversa_Click(sender As Object, e As EventArgs) Handles btnInversa.Click, btnReverseScientific.Click
+    Private Sub btnInversa_Click(sender As Object, e As EventArgs) Handles btnReverse.Click, btnReverseScientific.Click
 
         hidePowY()
 
-        If txtBoxResultado.Text <> 0 Then
-            txtBoxResultado.Text = 1 / Decimal.Parse(txtBoxResultado.Text)
+        If txtBoxResult.Text <> 0 Then
+            txtBoxResult.Text = 1 / Decimal.Parse(txtBoxResult.Text)
         End If
 
     End Sub
@@ -334,58 +331,77 @@
     End Sub
 
     Private Sub btnPow2_Click(sender As Object, e As EventArgs) Handles btnPow2.Click
+
         hidePowY()
 
-        txtBoxResultado.Text = Math.Pow(Double.Parse(txtBoxResultado.Text), 2)
+        txtBoxResult.Text = Math.Pow(Double.Parse(txtBoxResult.Text), 2)
 
     End Sub
 
     Private Sub btnPow3_Click(sender As Object, e As EventArgs) Handles btnPow3.Click
+
         hidePowY()
 
-        txtBoxResultado.Text = Math.Pow(Double.Parse(txtBoxResultado.Text), 3)
+        txtBoxResult.Text = Math.Pow(Double.Parse(txtBoxResult.Text), 3)
 
     End Sub
 
     Private Sub btnPowY_Click(sender As Object, e As EventArgs) Handles btnPowY.Click
 
         If Not powY Then
-            txtBoxResultado.Text = txtBoxResultado.Text + "  "
+            txtBoxResult.Text = txtBoxResult.Text + "  "
             powY = True
             LabelPow.Visible = True
         Else
             hidePowY()
-            txtBoxResultado.Text = txtBoxResultado.Text.Trim()
+            txtBoxResult.Text = txtBoxResult.Text.Trim()
         End If
 
 
     End Sub
 
     Private Sub hidePowY()
+
         LabelPow.Text = ""
         LabelPow.Visible = False
         powY = False
+
     End Sub
 
     Private Sub btnFactorial_Click(sender As Object, e As EventArgs) Handles btnFactorial.Click
         hidePowY()
 
-        If txtBoxResultado.Text <> numeroCero Then
+        If txtBoxResult.Text <> numberZero Then
 
             Dim acumulado As Double = 1.0
 
-            If txtBoxResultado.Text < 3200 Then
-                For i As Double = 1.0 To Double.Parse(txtBoxResultado.Text)
-
+            If txtBoxResult.Text < 3200 Then
+                For i As Double = 1.0 To Double.Parse(txtBoxResult.Text)
                     acumulado = acumulado * i
-
                 Next i
-
-                txtBoxResultado.Text = Math.Round(acumulado, 11)
+                txtBoxResult.Text = Math.Round(acumulado, 11)
             End If
 
         End If
 
     End Sub
 
+    Private Sub MenuStripViewHelp_Click(sender As Object, e As EventArgs) Handles MenuStripViewHelp.Click
+
+        FormHelp.setCordinates(Me.Location.X + Me.Width, Me.Location.Y)
+        FormHelp.Show()
+
+    End Sub
+
+    Private Sub centerForm()
+
+        Dim r = Screen.PrimaryScreen.WorkingArea
+        Dim x = r.Width - Me.Width
+        Dim y = r.Height - Me.Height
+
+        x = CInt(x / 2)
+        y = CInt(y / 2)
+        Me.StartPosition = FormStartPosition.Manual
+        Me.Location = New Point(x, y)
+    End Sub
 End Class
