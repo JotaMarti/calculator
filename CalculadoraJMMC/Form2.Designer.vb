@@ -23,9 +23,9 @@ Partial Class FormHelp
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormHelp))
-        Dim TreeNode13 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Basic")
-        Dim TreeNode14 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Advance")
-        Dim TreeNode15 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Operations", New System.Windows.Forms.TreeNode() {TreeNode13, TreeNode14})
+        Dim TreeNode1 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Basic")
+        Dim TreeNode2 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Advance")
+        Dim TreeNode3 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Operations", New System.Windows.Forms.TreeNode() {TreeNode1, TreeNode2})
         Me.richTxtBoxGeneral = New System.Windows.Forms.RichTextBox()
         Me.TreeView1 = New System.Windows.Forms.TreeView()
         Me.RichTextBoxBasics = New System.Windows.Forms.RichTextBox()
@@ -52,13 +52,13 @@ Partial Class FormHelp
         '
         Me.TreeView1.Location = New System.Drawing.Point(7, 12)
         Me.TreeView1.Name = "TreeView1"
-        TreeNode13.Name = "Basic"
-        TreeNode13.Text = "Basic"
-        TreeNode14.Name = "Advance"
-        TreeNode14.Text = "Advance"
-        TreeNode15.Name = "Operations"
-        TreeNode15.Text = "Operations"
-        Me.TreeView1.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode15})
+        TreeNode1.Name = "Basic"
+        TreeNode1.Text = "Basic"
+        TreeNode2.Name = "Advance"
+        TreeNode2.Text = "Advance"
+        TreeNode3.Name = "Operations"
+        TreeNode3.Text = "Operations"
+        Me.TreeView1.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode3})
         Me.TreeView1.Size = New System.Drawing.Size(112, 62)
         Me.TreeView1.TabIndex = 1
         '

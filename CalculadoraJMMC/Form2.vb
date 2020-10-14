@@ -11,12 +11,12 @@
 
         centerForm(x, y)
 
+        TreeView1.ExpandAll()
+
 
     End Sub
 
     Private Sub TreeView1_NodeMouseClick(sender As Object, e As TreeNodeMouseClickEventArgs) Handles TreeView1.NodeMouseClick
-
-        Console.WriteLine(e.Node.Text)
 
         Select Case e.Node.Text
             Case "Operations"
