@@ -97,6 +97,7 @@ Partial Class Form1
         Me.txtBoxResult.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.txtBoxResult.Size = New System.Drawing.Size(391, 53)
         Me.txtBoxResult.TabIndex = 1
+        Me.txtBoxResult.TabStop = False
         Me.txtBoxResult.Text = "0"
         Me.txtBoxResult.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
@@ -111,6 +112,7 @@ Partial Class Form1
         Me.btnComa.Name = "btnComa"
         Me.btnComa.Size = New System.Drawing.Size(73, 74)
         Me.btnComa.TabIndex = 13
+        Me.btnComa.TabStop = False
         Me.btnComa.Text = ","
         Me.btnComa.UseVisualStyleBackColor = False
         '
@@ -123,7 +125,8 @@ Partial Class Form1
         Me.btnNum7.Location = New System.Drawing.Point(3, 83)
         Me.btnNum7.Name = "btnNum7"
         Me.btnNum7.Size = New System.Drawing.Size(73, 74)
-        Me.btnNum7.TabIndex = 0
+        Me.btnNum7.TabIndex = 1
+        Me.btnNum7.TabStop = False
         Me.btnNum7.Text = "7"
         Me.btnNum7.UseVisualStyleBackColor = False
         '
@@ -137,6 +140,7 @@ Partial Class Form1
         Me.btnNum8.Name = "btnNum8"
         Me.btnNum8.Size = New System.Drawing.Size(73, 74)
         Me.btnNum8.TabIndex = 1
+        Me.btnNum8.TabStop = False
         Me.btnNum8.Text = "8"
         Me.btnNum8.UseVisualStyleBackColor = False
         '
@@ -150,6 +154,7 @@ Partial Class Form1
         Me.btnNum9.Name = "btnNum9"
         Me.btnNum9.Size = New System.Drawing.Size(73, 74)
         Me.btnNum9.TabIndex = 2
+        Me.btnNum9.TabStop = False
         Me.btnNum9.Text = "9"
         Me.btnNum9.UseVisualStyleBackColor = False
         '
@@ -163,6 +168,7 @@ Partial Class Form1
         Me.btnDiv.Name = "btnDiv"
         Me.btnDiv.Size = New System.Drawing.Size(73, 74)
         Me.btnDiv.TabIndex = 3
+        Me.btnDiv.TabStop = False
         Me.btnDiv.Text = "/"
         Me.btnDiv.UseVisualStyleBackColor = False
         '
@@ -176,6 +182,7 @@ Partial Class Form1
         Me.btnNum4.Name = "btnNum4"
         Me.btnNum4.Size = New System.Drawing.Size(73, 74)
         Me.btnNum4.TabIndex = 4
+        Me.btnNum4.TabStop = False
         Me.btnNum4.Text = "4"
         Me.btnNum4.UseVisualStyleBackColor = False
         '
@@ -189,6 +196,7 @@ Partial Class Form1
         Me.btnNum5.Name = "btnNum5"
         Me.btnNum5.Size = New System.Drawing.Size(73, 74)
         Me.btnNum5.TabIndex = 5
+        Me.btnNum5.TabStop = False
         Me.btnNum5.Text = "5"
         Me.btnNum5.UseVisualStyleBackColor = False
         '
@@ -202,6 +210,7 @@ Partial Class Form1
         Me.btnNum6.Name = "btnNum6"
         Me.btnNum6.Size = New System.Drawing.Size(73, 74)
         Me.btnNum6.TabIndex = 6
+        Me.btnNum6.TabStop = False
         Me.btnNum6.Text = "6"
         Me.btnNum6.UseVisualStyleBackColor = False
         '
@@ -215,6 +224,7 @@ Partial Class Form1
         Me.btnMult.Name = "btnMult"
         Me.btnMult.Size = New System.Drawing.Size(73, 74)
         Me.btnMult.TabIndex = 7
+        Me.btnMult.TabStop = False
         Me.btnMult.Text = "×"
         Me.btnMult.UseVisualStyleBackColor = False
         '
@@ -228,6 +238,7 @@ Partial Class Form1
         Me.btnNum1.Name = "btnNum1"
         Me.btnNum1.Size = New System.Drawing.Size(73, 74)
         Me.btnNum1.TabIndex = 8
+        Me.btnNum1.TabStop = False
         Me.btnNum1.Text = "1"
         Me.btnNum1.UseVisualStyleBackColor = False
         '
@@ -241,6 +252,7 @@ Partial Class Form1
         Me.btnNum2.Name = "btnNum2"
         Me.btnNum2.Size = New System.Drawing.Size(73, 74)
         Me.btnNum2.TabIndex = 9
+        Me.btnNum2.TabStop = False
         Me.btnNum2.Text = "2"
         Me.btnNum2.UseVisualStyleBackColor = False
         '
@@ -254,6 +266,7 @@ Partial Class Form1
         Me.btnNum3.Name = "btnNum3"
         Me.btnNum3.Size = New System.Drawing.Size(73, 74)
         Me.btnNum3.TabIndex = 10
+        Me.btnNum3.TabStop = False
         Me.btnNum3.Text = "3"
         Me.btnNum3.UseVisualStyleBackColor = False
         '
@@ -267,6 +280,7 @@ Partial Class Form1
         Me.btnRest.Name = "btnRest"
         Me.btnRest.Size = New System.Drawing.Size(73, 74)
         Me.btnRest.TabIndex = 11
+        Me.btnRest.TabStop = False
         Me.btnRest.Text = "-"
         Me.btnRest.UseVisualStyleBackColor = False
         '
@@ -283,6 +297,7 @@ Partial Class Form1
         Me.btnDelete.Name = "btnDelete"
         Me.btnDelete.Size = New System.Drawing.Size(75, 74)
         Me.btnDelete.TabIndex = 14
+        Me.btnDelete.TabStop = False
         Me.btnDelete.UseVisualStyleBackColor = False
         '
         'btnSum
@@ -295,6 +310,7 @@ Partial Class Form1
         Me.btnSum.Name = "btnSum"
         Me.btnSum.Size = New System.Drawing.Size(73, 74)
         Me.btnSum.TabIndex = 15
+        Me.btnSum.TabStop = False
         Me.btnSum.Text = "+"
         Me.btnSum.UseVisualStyleBackColor = False
         '
@@ -308,6 +324,7 @@ Partial Class Form1
         Me.btnCE.Name = "btnCE"
         Me.btnCE.Size = New System.Drawing.Size(75, 74)
         Me.btnCE.TabIndex = 16
+        Me.btnCE.TabStop = False
         Me.btnCE.Text = "CE"
         Me.btnCE.UseVisualStyleBackColor = False
         '
@@ -364,6 +381,7 @@ Partial Class Form1
         Me.btnPercentage.Name = "btnPercentage"
         Me.btnPercentage.Size = New System.Drawing.Size(152, 51)
         Me.btnPercentage.TabIndex = 21
+        Me.btnPercentage.TabStop = False
         Me.btnPercentage.Text = "%"
         Me.btnPercentage.UseVisualStyleBackColor = False
         '
@@ -378,6 +396,7 @@ Partial Class Form1
         Me.btnNum0.Name = "btnNum0"
         Me.btnNum0.Size = New System.Drawing.Size(73, 74)
         Me.btnNum0.TabIndex = 20
+        Me.btnNum0.TabStop = False
         Me.btnNum0.Text = "0"
         Me.btnNum0.UseVisualStyleBackColor = False
         '
@@ -392,6 +411,7 @@ Partial Class Form1
         Me.btnSign.Name = "btnSign"
         Me.btnSign.Size = New System.Drawing.Size(73, 74)
         Me.btnSign.TabIndex = 19
+        Me.btnSign.TabStop = False
         Me.btnSign.Text = "+/-"
         Me.btnSign.UseVisualStyleBackColor = False
         '
@@ -405,7 +425,7 @@ Partial Class Form1
         Me.btnEquals.Name = "btnEquals"
         Me.TableLayoutPanelStandard.SetRowSpan(Me.btnEquals, 2)
         Me.btnEquals.Size = New System.Drawing.Size(75, 154)
-        Me.btnEquals.TabIndex = 18
+        Me.btnEquals.TabIndex = 0
         Me.btnEquals.Text = "="
         Me.btnEquals.UseVisualStyleBackColor = False
         '
@@ -419,6 +439,7 @@ Partial Class Form1
         Me.btnC.Name = "btnC"
         Me.btnC.Size = New System.Drawing.Size(75, 74)
         Me.btnC.TabIndex = 17
+        Me.btnC.TabStop = False
         Me.btnC.Text = "C"
         Me.btnC.UseVisualStyleBackColor = False
         '
@@ -433,6 +454,7 @@ Partial Class Form1
         Me.btnReverse.Name = "btnReverse"
         Me.btnReverse.Size = New System.Drawing.Size(152, 51)
         Me.btnReverse.TabIndex = 22
+        Me.btnReverse.TabStop = False
         Me.btnReverse.Text = "1/x"
         Me.btnReverse.UseVisualStyleBackColor = False
         '
@@ -455,13 +477,13 @@ Partial Class Form1
         'MenuStripStandard
         '
         Me.MenuStripStandard.Name = "MenuStripStandard"
-        Me.MenuStripStandard.Size = New System.Drawing.Size(152, 22)
+        Me.MenuStripStandard.Size = New System.Drawing.Size(122, 22)
         Me.MenuStripStandard.Text = "Standard"
         '
         'MenuStricScientific
         '
         Me.MenuStricScientific.Name = "MenuStricScientific"
-        Me.MenuStricScientific.Size = New System.Drawing.Size(152, 22)
+        Me.MenuStricScientific.Size = New System.Drawing.Size(122, 22)
         Me.MenuStricScientific.Text = "Scientific"
         '
         'HelpToolStripMenuItem
@@ -543,6 +565,7 @@ Partial Class Form1
         Me.btnFactorial.Name = "btnFactorial"
         Me.btnFactorial.Size = New System.Drawing.Size(154, 59)
         Me.btnFactorial.TabIndex = 26
+        Me.btnFactorial.TabStop = False
         Me.btnFactorial.Text = "n!"
         Me.btnFactorial.UseVisualStyleBackColor = False
         '
@@ -556,6 +579,7 @@ Partial Class Form1
         Me.btnPowY.Name = "btnPowY"
         Me.btnPowY.Size = New System.Drawing.Size(73, 59)
         Me.btnPowY.TabIndex = 25
+        Me.btnPowY.TabStop = False
         Me.btnPowY.Text = "xʸ"
         Me.btnPowY.UseVisualStyleBackColor = False
         '
@@ -569,6 +593,7 @@ Partial Class Form1
         Me.btnPow3.Name = "btnPow3"
         Me.btnPow3.Size = New System.Drawing.Size(73, 59)
         Me.btnPow3.TabIndex = 24
+        Me.btnPow3.TabStop = False
         Me.btnPow3.Text = "x³"
         Me.btnPow3.UseVisualStyleBackColor = False
         '
@@ -582,6 +607,7 @@ Partial Class Form1
         Me.btnPow2.Name = "btnPow2"
         Me.btnPow2.Size = New System.Drawing.Size(73, 59)
         Me.btnPow2.TabIndex = 23
+        Me.btnPow2.TabStop = False
         Me.btnPow2.Text = "x²"
         Me.btnPow2.UseVisualStyleBackColor = False
         '
@@ -596,6 +622,7 @@ Partial Class Form1
         Me.btnPercentageScientific.Name = "btnPercentageScientific"
         Me.btnPercentageScientific.Size = New System.Drawing.Size(152, 51)
         Me.btnPercentageScientific.TabIndex = 21
+        Me.btnPercentageScientific.TabStop = False
         Me.btnPercentageScientific.Text = "%"
         Me.btnPercentageScientific.UseVisualStyleBackColor = False
         '
@@ -610,6 +637,7 @@ Partial Class Form1
         Me.btnNum0Scientific.Name = "btnNum0Scientific"
         Me.btnNum0Scientific.Size = New System.Drawing.Size(73, 66)
         Me.btnNum0Scientific.TabIndex = 20
+        Me.btnNum0Scientific.TabStop = False
         Me.btnNum0Scientific.Text = "0"
         Me.btnNum0Scientific.UseVisualStyleBackColor = False
         '
@@ -624,6 +652,7 @@ Partial Class Form1
         Me.btnSignScientific.Name = "btnSignScientific"
         Me.btnSignScientific.Size = New System.Drawing.Size(73, 66)
         Me.btnSignScientific.TabIndex = 19
+        Me.btnSignScientific.TabStop = False
         Me.btnSignScientific.Text = "+/-"
         Me.btnSignScientific.UseVisualStyleBackColor = False
         '
@@ -637,7 +666,7 @@ Partial Class Form1
         Me.btnEqualsScientific.Name = "btnEqualsScientific"
         Me.TableLayoutPanelScientific.SetRowSpan(Me.btnEqualsScientific, 2)
         Me.btnEqualsScientific.Size = New System.Drawing.Size(75, 131)
-        Me.btnEqualsScientific.TabIndex = 18
+        Me.btnEqualsScientific.TabIndex = 0
         Me.btnEqualsScientific.Text = "="
         Me.btnEqualsScientific.UseVisualStyleBackColor = False
         '
@@ -651,6 +680,7 @@ Partial Class Form1
         Me.btnCScientific.Name = "btnCScientific"
         Me.btnCScientific.Size = New System.Drawing.Size(75, 59)
         Me.btnCScientific.TabIndex = 17
+        Me.btnCScientific.TabStop = False
         Me.btnCScientific.Text = "C"
         Me.btnCScientific.UseVisualStyleBackColor = False
         '
@@ -664,6 +694,7 @@ Partial Class Form1
         Me.btnCEScientific.Name = "btnCEScientific"
         Me.btnCEScientific.Size = New System.Drawing.Size(75, 59)
         Me.btnCEScientific.TabIndex = 16
+        Me.btnCEScientific.TabStop = False
         Me.btnCEScientific.Text = "CE"
         Me.btnCEScientific.UseVisualStyleBackColor = False
         '
@@ -677,6 +708,7 @@ Partial Class Form1
         Me.btnSumScientific.Name = "btnSumScientific"
         Me.btnSumScientific.Size = New System.Drawing.Size(73, 66)
         Me.btnSumScientific.TabIndex = 15
+        Me.btnSumScientific.TabStop = False
         Me.btnSumScientific.Text = "+"
         Me.btnSumScientific.UseVisualStyleBackColor = False
         '
@@ -693,6 +725,7 @@ Partial Class Form1
         Me.btnBorrarScientific.Name = "btnBorrarScientific"
         Me.btnBorrarScientific.Size = New System.Drawing.Size(75, 59)
         Me.btnBorrarScientific.TabIndex = 14
+        Me.btnBorrarScientific.TabStop = False
         Me.btnBorrarScientific.UseVisualStyleBackColor = False
         '
         'btnRestScientific
@@ -705,6 +738,7 @@ Partial Class Form1
         Me.btnRestScientific.Name = "btnRestScientific"
         Me.btnRestScientific.Size = New System.Drawing.Size(73, 59)
         Me.btnRestScientific.TabIndex = 11
+        Me.btnRestScientific.TabStop = False
         Me.btnRestScientific.Text = "-"
         Me.btnRestScientific.UseVisualStyleBackColor = False
         '
@@ -718,6 +752,7 @@ Partial Class Form1
         Me.btnNum3Scientific.Name = "btnNum3Scientific"
         Me.btnNum3Scientific.Size = New System.Drawing.Size(73, 59)
         Me.btnNum3Scientific.TabIndex = 10
+        Me.btnNum3Scientific.TabStop = False
         Me.btnNum3Scientific.Text = "3"
         Me.btnNum3Scientific.UseVisualStyleBackColor = False
         '
@@ -731,6 +766,7 @@ Partial Class Form1
         Me.btnNum2Scientific.Name = "btnNum2Scientific"
         Me.btnNum2Scientific.Size = New System.Drawing.Size(73, 59)
         Me.btnNum2Scientific.TabIndex = 9
+        Me.btnNum2Scientific.TabStop = False
         Me.btnNum2Scientific.Text = "2"
         Me.btnNum2Scientific.UseVisualStyleBackColor = False
         '
@@ -744,6 +780,7 @@ Partial Class Form1
         Me.btnNum1Scientific.Name = "btnNum1Scientific"
         Me.btnNum1Scientific.Size = New System.Drawing.Size(73, 59)
         Me.btnNum1Scientific.TabIndex = 8
+        Me.btnNum1Scientific.TabStop = False
         Me.btnNum1Scientific.Text = "1"
         Me.btnNum1Scientific.UseVisualStyleBackColor = False
         '
@@ -757,6 +794,7 @@ Partial Class Form1
         Me.btnMultScientific.Name = "btnMultScientific"
         Me.btnMultScientific.Size = New System.Drawing.Size(73, 59)
         Me.btnMultScientific.TabIndex = 7
+        Me.btnMultScientific.TabStop = False
         Me.btnMultScientific.Text = "×"
         Me.btnMultScientific.UseVisualStyleBackColor = False
         '
@@ -770,6 +808,7 @@ Partial Class Form1
         Me.btnNum6Scientific.Name = "btnNum6Scientific"
         Me.btnNum6Scientific.Size = New System.Drawing.Size(73, 59)
         Me.btnNum6Scientific.TabIndex = 6
+        Me.btnNum6Scientific.TabStop = False
         Me.btnNum6Scientific.Text = "6"
         Me.btnNum6Scientific.UseVisualStyleBackColor = False
         '
@@ -783,6 +822,7 @@ Partial Class Form1
         Me.btnNum5Scientific.Name = "btnNum5Scientific"
         Me.btnNum5Scientific.Size = New System.Drawing.Size(73, 59)
         Me.btnNum5Scientific.TabIndex = 5
+        Me.btnNum5Scientific.TabStop = False
         Me.btnNum5Scientific.Text = "5"
         Me.btnNum5Scientific.UseVisualStyleBackColor = False
         '
@@ -796,6 +836,7 @@ Partial Class Form1
         Me.btnNum4Scientific.Name = "btnNum4Scientific"
         Me.btnNum4Scientific.Size = New System.Drawing.Size(73, 59)
         Me.btnNum4Scientific.TabIndex = 4
+        Me.btnNum4Scientific.TabStop = False
         Me.btnNum4Scientific.Text = "4"
         Me.btnNum4Scientific.UseVisualStyleBackColor = False
         '
@@ -809,6 +850,7 @@ Partial Class Form1
         Me.btnDivScientific.Name = "btnDivScientific"
         Me.btnDivScientific.Size = New System.Drawing.Size(73, 59)
         Me.btnDivScientific.TabIndex = 3
+        Me.btnDivScientific.TabStop = False
         Me.btnDivScientific.Text = "/"
         Me.btnDivScientific.UseVisualStyleBackColor = False
         '
@@ -822,6 +864,7 @@ Partial Class Form1
         Me.btnNum9Scientific.Name = "btnNum9Scientific"
         Me.btnNum9Scientific.Size = New System.Drawing.Size(73, 59)
         Me.btnNum9Scientific.TabIndex = 2
+        Me.btnNum9Scientific.TabStop = False
         Me.btnNum9Scientific.Text = "9"
         Me.btnNum9Scientific.UseVisualStyleBackColor = False
         '
@@ -835,6 +878,7 @@ Partial Class Form1
         Me.btnNum8Scientific.Name = "btnNum8Scientific"
         Me.btnNum8Scientific.Size = New System.Drawing.Size(73, 59)
         Me.btnNum8Scientific.TabIndex = 1
+        Me.btnNum8Scientific.TabStop = False
         Me.btnNum8Scientific.Text = "8"
         Me.btnNum8Scientific.UseVisualStyleBackColor = False
         '
@@ -847,7 +891,8 @@ Partial Class Form1
         Me.btnNum7Scientific.Location = New System.Drawing.Point(3, 133)
         Me.btnNum7Scientific.Name = "btnNum7Scientific"
         Me.btnNum7Scientific.Size = New System.Drawing.Size(73, 59)
-        Me.btnNum7Scientific.TabIndex = 0
+        Me.btnNum7Scientific.TabIndex = 1
+        Me.btnNum7Scientific.TabStop = False
         Me.btnNum7Scientific.Text = "7"
         Me.btnNum7Scientific.UseVisualStyleBackColor = False
         '
@@ -862,6 +907,7 @@ Partial Class Form1
         Me.btnComaScientific.Name = "btnComaScientific"
         Me.btnComaScientific.Size = New System.Drawing.Size(73, 66)
         Me.btnComaScientific.TabIndex = 13
+        Me.btnComaScientific.TabStop = False
         Me.btnComaScientific.Text = ","
         Me.btnComaScientific.UseVisualStyleBackColor = False
         '
@@ -876,6 +922,7 @@ Partial Class Form1
         Me.btnReverseScientific.Name = "btnReverseScientific"
         Me.btnReverseScientific.Size = New System.Drawing.Size(152, 51)
         Me.btnReverseScientific.TabIndex = 22
+        Me.btnReverseScientific.TabStop = False
         Me.btnReverseScientific.Text = "1/x"
         Me.btnReverseScientific.UseVisualStyleBackColor = False
         '
@@ -901,6 +948,7 @@ Partial Class Form1
         Me.Controls.Add(Me.TableLayoutPanelStandard)
         Me.Controls.Add(Me.MenuStrip)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.KeyPreview = True
         Me.MainMenuStrip = Me.MenuStrip
         Me.MaximizeBox = False
         Me.Name = "Form1"

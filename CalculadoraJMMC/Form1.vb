@@ -2,15 +2,17 @@
 
     Dim operator1? As Decimal
     Dim operator2? As Decimal
-    Dim btnClicked As Button
+    Dim previousBtnClicked As Button
     Dim previousOperation As Button
     Dim currentOperation As Button
     Dim cleanScreen As Boolean = False
     Dim numberEntered As Boolean = False
+    Dim alreadyOperationEntered As Boolean = False
     Dim maxLenght As Integer = 16
     Dim empty As String = ""
     Dim numberZero As String = "0"
     Dim powY As Boolean = False
+    Dim multConcat = False
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
@@ -18,6 +20,7 @@
         TableLayoutPanelScientific.Visible = False
         TableLayoutPanelStandard.Visible = True
         PanelHideStandard.Visible = False
+        btnEquals.Focus()
 
         hidePowY()
         centerForm()
@@ -27,17 +30,19 @@
 
     Private Sub btnNum_Click(sender As Object, e As EventArgs) Handles btnNum0.Click, btnNum1.Click, btnNum9.Click, btnNum8.Click, btnNum7.Click, btnNum6.Click, btnNum5.Click, btnNum4.Click, btnNum3.Click, btnNum2.Click, btnNum9Scientific.Click, btnNum8Scientific.Click, btnNum7Scientific.Click, btnNum6Scientific.Click, btnNum5Scientific.Click, btnNum4Scientific.Click, btnNum3Scientific.Click, btnNum2Scientific.Click, btnNum1Scientific.Click, btnNum0Scientific.Click
 
+        alreadyOperationEntered = False
+
         If cleanScreen = True AndAlso
-            btnClicked.Text <> "," Then
+            previousBtnClicked.Text <> "," Then
             cleanTxtBox()
         End If
 
-        btnClicked = sender
+        previousBtnClicked = sender
 
         ' Si he seleccionado la potencia de y me quedo aqui capturando los numeros y el programa no sigue
         If powY Then
             If Not LabelPow.Text.Length >= 2 Then
-                LabelPow.Text = LabelPow.Text & btnClicked.Text
+                LabelPow.Text = LabelPow.Text & previousBtnClicked.Text
             End If
             Exit Sub
         End If
@@ -46,18 +51,18 @@
         ' Con esto no añado más numeros si ha superado el largo máximo, en este caso he puesto 16
         ' También realizo varias comprobaciones para no poner ceros a la izquierda
         If txtBoxResult.Text.Length < maxLenght Then
-            If btnClicked.Text = btnNum0.Text Then
+            If previousBtnClicked.Text = btnNum0.Text Then
                 If txtBoxResult.Text = numberZero Or
                     txtBoxResult.Text = empty Then
                     txtBoxResult.Text = numberZero
                 Else
-                    txtBoxResult.Text = txtBoxResult.Text & btnClicked.Text
+                    txtBoxResult.Text = txtBoxResult.Text & previousBtnClicked.Text
                 End If
             Else
                 If txtBoxResult.Text = numberZero Then
                     txtBoxResult.Text = empty
                 End If
-                txtBoxResult.Text = txtBoxResult.Text & btnClicked.Text
+                txtBoxResult.Text = txtBoxResult.Text & previousBtnClicked.Text
                 numberEntered = True
             End If
         End If
@@ -65,6 +70,12 @@
     End Sub
 
     Private Sub btnOperation_Click(sender As Object, e As EventArgs) Handles btnSum.Click, btnMult.Click, btnRest.Click, btnDiv.Click, btnPercentage.Click, btnSumScientific.Click, btnRestScientific.Click, btnPercentageScientific.Click, btnMultScientific.Click, btnDivScientific.Click
+
+        If alreadyOperationEntered Then
+            Exit Sub
+        End If
+
+        alreadyOperationEntered = True
 
         ' Si la operacion actual no es nula me guardo la operacion anterior
         If currentOperation IsNot Nothing Then
@@ -93,6 +104,21 @@
             Exit Sub
         End If
 
+        If operator1 IsNot Nothing AndAlso
+                sender.Text = btnMult.Text Then
+            operator2 = Decimal.Parse(txtBoxResult.Text)
+            multConcat = True
+            cleanScreen = True
+            Exit Sub
+        End If
+
+        If multConcat Then
+            operator2 = Decimal.Parse(txtBoxResult.Text) * operator2
+            txtBoxResult.Text = operator2
+            previousOperation = currentOperation
+            multConcat = False
+        End If
+
         ' Si el operador1 esta vacio y hemos escrito algo me guardo el valor, si no se ha escrito nada vuelvo a pintar el 0
         ' Y si todo es correcto llamo al sub del boton igual para realizar la operacion con el valor de la operacion anterior.
 
@@ -114,7 +140,7 @@
             Console.WriteLine(ex.Message)
         End Try
 
-        btnClicked = sender
+        previousBtnClicked = sender
 
     End Sub
 
@@ -128,6 +154,13 @@
 
         ' Si tenemos operador1 guardamos operador2 y depende de si le hemos pulsado en igual o en los operador realizo dos cosas distintas
         If operator1 IsNot Nothing Then
+
+            If multConcat Then
+                operator2 = Decimal.Parse(txtBoxResult.Text) * operator2
+                multConcat = False
+                txtBoxResult.Text = operator2
+                currentOperation = previousOperation
+            End If
 
             ' Si he seleccionado la potencia de Y cuando le doy a igual primero chequeo que tengo numeros en la potencia
             ' Si tengo numeros hago la potencia y la uso como operador dos, si no tengo uso el numero principal como operador 2
@@ -158,7 +191,7 @@
             End If
         End If
 
-        btnClicked = sender
+        previousBtnClicked = sender
 
 
         ' Aqui solo entro si hago la potencia como primera operacion y le doy a igual
@@ -231,7 +264,7 @@
             cleanScreen = True
         End If
 
-        btnClicked = sender
+        previousBtnClicked = sender
 
     End Sub
 
@@ -257,7 +290,8 @@
 
     Private Sub cleanTxtBox()
 
-        If txtBoxResult.Text <> numberZero Then
+        If txtBoxResult.Text <> numberZero AndAlso
+            multConcat = False Then
             operator1 = Decimal.Parse(txtBoxResult.Text)
         End If
         txtBoxResult.Text = ""
@@ -369,19 +403,17 @@
     End Sub
 
     Private Sub btnFactorial_Click(sender As Object, e As EventArgs) Handles btnFactorial.Click
+
         hidePowY()
 
         If txtBoxResult.Text <> numberZero Then
-
             Dim acumulado As Double = 1.0
-
             If txtBoxResult.Text < 3200 Then
                 For i As Double = 1.0 To Double.Parse(txtBoxResult.Text)
                     acumulado = acumulado * i
                 Next i
                 txtBoxResult.Text = Math.Round(acumulado, 11)
             End If
-
         End If
 
     End Sub
@@ -403,5 +435,49 @@
         y = CInt(y / 2)
         Me.StartPosition = FormStartPosition.Manual
         Me.Location = New Point(x, y)
+
     End Sub
+
+    Private Sub Form1_KeyPress(sender As Object, e As KeyPressEventArgs) Handles MyBase.KeyPress
+
+        ' Para poder introducir numeros y operaciones por el teclado
+        Select Case e.KeyChar
+            Case "1"
+                btnNum1.PerformClick()
+            Case "2"
+                btnNum2.PerformClick()
+            Case "3"
+                btnNum3.PerformClick()
+            Case "4"
+                btnNum4.PerformClick()
+            Case "5"
+                btnNum5.PerformClick()
+            Case "6"
+                btnNum6.PerformClick()
+            Case "7"
+                btnNum7.PerformClick()
+            Case "8"
+                btnNum8.PerformClick()
+            Case "9"
+                btnNum9.PerformClick()
+            Case "0"
+                btnNum0.PerformClick()
+            Case "*"
+                btnMult.PerformClick()
+            Case "/"
+                btnDiv.PerformClick()
+            Case "+"
+                btnSum.PerformClick()
+            Case "-"
+                btnRest.PerformClick()
+        End Select
+
+        If Asc(e.KeyChar) = 8 Then
+            btnDelete.PerformClick()
+        End If
+
+        btnEquals.Focus()
+
+    End Sub
+
 End Class
