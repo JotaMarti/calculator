@@ -65,7 +65,7 @@ Partial Class Form1
         Me.btnCScientific = New System.Windows.Forms.Button()
         Me.btnCEScientific = New System.Windows.Forms.Button()
         Me.btnSumScientific = New System.Windows.Forms.Button()
-        Me.btnBorrarScientific = New System.Windows.Forms.Button()
+        Me.btnDeleteScientific = New System.Windows.Forms.Button()
         Me.btnRestScientific = New System.Windows.Forms.Button()
         Me.btnNum3Scientific = New System.Windows.Forms.Button()
         Me.btnNum2Scientific = New System.Windows.Forms.Button()
@@ -526,7 +526,7 @@ Partial Class Form1
         Me.TableLayoutPanelScientific.Controls.Add(Me.btnCScientific, 4, 3)
         Me.TableLayoutPanelScientific.Controls.Add(Me.btnCEScientific, 4, 2)
         Me.TableLayoutPanelScientific.Controls.Add(Me.btnSumScientific, 3, 5)
-        Me.TableLayoutPanelScientific.Controls.Add(Me.btnBorrarScientific, 4, 0)
+        Me.TableLayoutPanelScientific.Controls.Add(Me.btnDeleteScientific, 4, 0)
         Me.TableLayoutPanelScientific.Controls.Add(Me.btnRestScientific, 3, 4)
         Me.TableLayoutPanelScientific.Controls.Add(Me.btnNum3Scientific, 2, 4)
         Me.TableLayoutPanelScientific.Controls.Add(Me.btnNum2Scientific, 1, 4)
@@ -712,21 +712,21 @@ Partial Class Form1
         Me.btnSumScientific.Text = "+"
         Me.btnSumScientific.UseVisualStyleBackColor = False
         '
-        'btnBorrarScientific
+        'btnDeleteScientific
         '
-        Me.btnBorrarScientific.BackColor = System.Drawing.Color.Transparent
-        Me.btnBorrarScientific.BackgroundImage = Global.CalculadoraJMMC.My.Resources.Resources.eliminar
-        Me.btnBorrarScientific.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.btnBorrarScientific.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.btnBorrarScientific.FlatAppearance.BorderSize = 0
-        Me.btnBorrarScientific.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnBorrarScientific.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnBorrarScientific.Location = New System.Drawing.Point(319, 3)
-        Me.btnBorrarScientific.Name = "btnBorrarScientific"
-        Me.btnBorrarScientific.Size = New System.Drawing.Size(75, 59)
-        Me.btnBorrarScientific.TabIndex = 14
-        Me.btnBorrarScientific.TabStop = False
-        Me.btnBorrarScientific.UseVisualStyleBackColor = False
+        Me.btnDeleteScientific.BackColor = System.Drawing.Color.Transparent
+        Me.btnDeleteScientific.BackgroundImage = Global.CalculadoraJMMC.My.Resources.Resources.eliminar
+        Me.btnDeleteScientific.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.btnDeleteScientific.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.btnDeleteScientific.FlatAppearance.BorderSize = 0
+        Me.btnDeleteScientific.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnDeleteScientific.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnDeleteScientific.Location = New System.Drawing.Point(319, 3)
+        Me.btnDeleteScientific.Name = "btnDeleteScientific"
+        Me.btnDeleteScientific.Size = New System.Drawing.Size(75, 59)
+        Me.btnDeleteScientific.TabIndex = 14
+        Me.btnDeleteScientific.TabStop = False
+        Me.btnDeleteScientific.UseVisualStyleBackColor = False
         '
         'btnRestScientific
         '
@@ -1001,7 +1001,7 @@ Partial Class Form1
     Friend WithEvents btnCScientific As Button
     Friend WithEvents btnCEScientific As Button
     Friend WithEvents btnSumScientific As Button
-    Friend WithEvents btnBorrarScientific As Button
+    Friend WithEvents btnDeleteScientific As Button
     Friend WithEvents btnRestScientific As Button
     Friend WithEvents btnNum3Scientific As Button
     Friend WithEvents btnNum2Scientific As Button

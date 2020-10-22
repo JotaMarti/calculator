@@ -13,6 +13,7 @@
     Dim numberZero As String = "0"
     Dim powY As Boolean = False
     Dim multConcat = False
+    Dim normalMode = True
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
@@ -233,7 +234,7 @@
 
     End Function
 
-    Private Sub btnBorrar_Click(sender As Object, e As EventArgs) Handles btnDelete.Click, btnBorrarScientific.Click
+    Private Sub btnBorrar_Click(sender As Object, e As EventArgs) Handles btnDelete.Click, btnDeleteScientific.Click
 
         ' Cuando estemos introduciendo numeros en el pow de Y, el boton de borrar solo funcionara para estos numeros
         If powY Then
@@ -349,6 +350,7 @@
         TableLayoutPanelScientific.Visible = True
         PanelHideStandard.Visible = True
 
+        normalMode = False
 
     End Sub
 
@@ -360,6 +362,8 @@
         TableLayoutPanelStandard.Visible = True
         TableLayoutPanelScientific.Visible = False
         PanelHideStandard.Visible = False
+
+        normalMode = True
 
 
     End Sub
@@ -440,42 +444,85 @@
     Private Sub Form1_KeyPress(sender As Object, e As KeyPressEventArgs) Handles MyBase.KeyPress
 
         ' Para poder introducir numeros y operaciones por el teclado
-        Select Case e.KeyChar
-            Case "1"
-                btnNum1.PerformClick()
-            Case "2"
-                btnNum2.PerformClick()
-            Case "3"
-                btnNum3.PerformClick()
-            Case "4"
-                btnNum4.PerformClick()
-            Case "5"
-                btnNum5.PerformClick()
-            Case "6"
-                btnNum6.PerformClick()
-            Case "7"
-                btnNum7.PerformClick()
-            Case "8"
-                btnNum8.PerformClick()
-            Case "9"
-                btnNum9.PerformClick()
-            Case "0"
-                btnNum0.PerformClick()
-            Case "*"
-                btnMult.PerformClick()
-            Case "/"
-                btnDiv.PerformClick()
-            Case "+"
-                btnSum.PerformClick()
-            Case "-"
-                btnRest.PerformClick()
-        End Select
+        If normalMode Then
+            Select Case e.KeyChar
+                Case "1"
+                    btnNum1.PerformClick()
+                Case "2"
+                    btnNum2.PerformClick()
+                Case "3"
+                    btnNum3.PerformClick()
+                Case "4"
+                    btnNum4.PerformClick()
+                Case "5"
+                    btnNum5.PerformClick()
+                Case "6"
+                    btnNum6.PerformClick()
+                Case "7"
+                    btnNum7.PerformClick()
+                Case "8"
+                    btnNum8.PerformClick()
+                Case "9"
+                    btnNum9.PerformClick()
+                Case "0"
+                    btnNum0.PerformClick()
+                Case "*"
+                    btnMult.PerformClick()
+                Case "/"
+                    btnDiv.PerformClick()
+                Case "+"
+                    btnSum.PerformClick()
+                Case "-"
+                    btnRest.PerformClick()
+            End Select
 
-        If Asc(e.KeyChar) = 8 Then
-            btnDelete.PerformClick()
+            If Asc(e.KeyChar) = 8 Then
+                btnDelete.PerformClick()
+            End If
+
+            btnEquals.Focus()
+        Else
+            Select Case e.KeyChar
+                Case "1"
+                    btnNum1Scientific.PerformClick()
+                Case "2"
+                    btnNum2Scientific.PerformClick()
+                Case "3"
+                    btnNum3Scientific.PerformClick()
+                Case "4"
+                    btnNum4Scientific.PerformClick()
+                Case "5"
+                    btnNum5Scientific.PerformClick()
+                Case "6"
+                    btnNum6Scientific.PerformClick()
+                Case "7"
+                    btnNum7Scientific.PerformClick()
+                Case "8"
+                    btnNum8Scientific.PerformClick()
+                Case "9"
+                    btnNum9Scientific.PerformClick()
+                Case "0"
+                    btnNum0Scientific.PerformClick()
+                Case "*"
+                    btnMultScientific.PerformClick()
+                Case "/"
+                    btnDivScientific.PerformClick()
+                Case "+"
+                    btnSumScientific.PerformClick()
+                Case "-"
+                    btnRestScientific.PerformClick()
+            End Select
+
+
+            If Asc(e.KeyChar) = 8 Then
+                btnDeleteScientific.PerformClick()
+            End If
+
+            btnEqualsScientific.Focus()
         End If
 
-        btnEquals.Focus()
+
+
 
     End Sub
 
