@@ -420,7 +420,6 @@
 
     Private Sub MenuStripViewHelp_Click(sender As Object, e As EventArgs) Handles MenuStripViewHelp.Click
 
-        FormHelp.setCordinates(Me.Location.X + Me.Width, Me.Location.Y)
         FormHelp.Show()
 
     End Sub

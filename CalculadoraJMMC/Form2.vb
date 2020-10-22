@@ -1,15 +1,11 @@
 ﻿Public Class FormHelp
 
-    Dim x As Integer
-    Dim y As Integer
-
-
     Private Sub FormHelp_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         richTxtBoxGeneral.Visible = True
         RichTextBoxAdvance.Visible = False
         RichTextBoxBasics.Visible = False
 
-        centerForm(x, y)
+        centerForm(Form1.Location.X, Form1.Location.Y)
 
         TreeView1.ExpandAll()
 
@@ -37,18 +33,11 @@
 
     End Sub
 
-    Public Sub setCordinates(x As Integer, y As Integer)
-
-        Me.x = x
-        Me.y = y
-
-    End Sub
-
 
     Public Sub centerForm(x As Integer, y As Integer)
 
         Me.StartPosition = FormStartPosition.Manual
-        Me.Location = New Point(x, y)
+        Me.Location = New Point(x + Form1.Width, y)
 
     End Sub
 End Class
