@@ -11,4 +11,4 @@ This is a project in course for the class of "Diseño de interfaces", I will be 
 
 Right now I have finished Stage 5 and the calculator looks like this:
 
-![](https://raw.githubusercontent.com/JotaMarti/calculator/master/calculator.JPG)
+![](https://raw.githubusercontent.com/JotaMarti/calculator/master/calculator.JPG?token=ALRNHG5V2KKT3D7P46FGZ7K7XIXPA)
