@@ -40,7 +40,8 @@
 
         previousBtnClicked = sender
 
-        ' Si he seleccionado la potencia de y me quedo aqui capturando los numeros y el programa no sigue
+        ' if pow of y is selected the program stays here taking numbers when a number is clicked, additionally we only
+        ' take two numbers for the pow calculation
         If powY Then
             If Not LabelPow.Text.Length >= 2 Then
                 LabelPow.Text = LabelPow.Text & previousBtnClicked.Text
@@ -48,9 +49,8 @@
             Exit Sub
         End If
 
-
-        ' Con esto no añado más numeros si ha superado el largo máximo, en este caso he puesto 16
-        ' También realizo varias comprobaciones para no poner ceros a la izquierda
+        ' With this logic we don't add more numbers if the maxLenght is reached, in this case 16
+        ' Additionally with this logic we dont put zeros at the left of any number
         If txtBoxResult.Text.Length < maxLenght Then
             If previousBtnClicked.Text = btnNum0.Text Then
                 If txtBoxResult.Text = numberZero Or
@@ -78,20 +78,18 @@
 
         alreadyOperationEntered = True
 
-        ' Si la operacion actual no es nula me guardo la operacion anterior
         If currentOperation IsNot Nothing Then
             previousOperation = currentOperation
         End If
 
-        ' Me guardo la operacion actual
         currentOperation = sender
 
-        ' Esto es un check para cuando se concatenan operaciones, si damos varias veces al boton más por ejemplo no haga nada
+        ' Check for when we it for example the plus sign couple if consecutive times, with this if the program doesn't fail
         If numberEntered = False Then
             Exit Sub
         End If
 
-        ' Para manejar las potencias cuando concatenamos operaciones
+        ' Logic to handle the pows when we concatenate operations
         If powY Then
             Try
                 operator1 = Math.Pow(Decimal.Parse(txtBoxResult.Text), Integer.Parse(LabelPow.Text))
@@ -120,9 +118,8 @@
             multConcat = False
         End If
 
-        ' Si el operador1 esta vacio y hemos escrito algo me guardo el valor, si no se ha escrito nada vuelvo a pintar el 0
-        ' Y si todo es correcto llamo al sub del boton igual para realizar la operacion con el valor de la operacion anterior.
-
+        ' If operator1 is empty and we have entered some numbers we save the value un operator 1, if no number is entered we paint 0 again
+        ' Else if operator1 is not empty we call the equals function to do an operation because that means that is a concatenate operation
         Try
             If operator1 Is Nothing AndAlso
             txtBoxResult.Text <> numberZero Then
@@ -153,7 +150,6 @@
 
         Dim result As Decimal
 
-        ' Si tenemos operador1 guardamos operador2 y depende de si le hemos pulsado en igual o en los operador realizo dos cosas distintas
         If operator1 IsNot Nothing Then
 
             If multConcat Then
@@ -163,8 +159,8 @@
                 currentOperation = previousOperation
             End If
 
-            ' Si he seleccionado la potencia de Y cuando le doy a igual primero chequeo que tengo numeros en la potencia
-            ' Si tengo numeros hago la potencia y la uso como operador dos, si no tengo uso el numero principal como operador 2
+            ' If we have the pow of y selected when we hit equals button first we check that we have numbers in the y number
+            ' If we have numbers we do the power and we use it as operator two, if we dont have numbers in the y we take the number of the base
             If powY Then
                 If LabelPow.Text.Length > 0 Then
                     operator2 = Math.Pow(Decimal.Parse(txtBoxResult.Text), Integer.Parse(LabelPow.Text))
@@ -194,8 +190,7 @@
 
         previousBtnClicked = sender
 
-
-        ' Aqui solo entro si hago la potencia como primera operacion y le doy a igual
+        ' Here we only enter if we do the pow as first operation and we hit equals
         If powY Then
             If LabelPow.Text.Length > 0 Then
                 txtBoxResult.Text = Math.Pow(Decimal.Parse(txtBoxResult.Text), Integer.Parse(LabelPow.Text))
@@ -236,7 +231,7 @@
 
     Private Sub btnBorrar_Click(sender As Object, e As EventArgs) Handles btnDelete.Click, btnDeleteScientific.Click
 
-        ' Cuando estemos introduciendo numeros en el pow de Y, el boton de borrar solo funcionara para estos numeros
+        ' When we are introducing numbers in the exponent of the pow of y the delete button only works for the exponent numbers
         If powY Then
             If LabelPow.Text.Length >= 1 Then
                 LabelPow.Text = LabelPow.Text.Substring(0, LabelPow.Text.Length - 1)
@@ -244,14 +239,13 @@
             Exit Sub
         End If
 
-        ' En el primer if realizo una comprobación, por que cuando el numero tenia coma se quedaba por ej 3, y generaba problemas,
-        ' lo que hago es comprobar si lo siguiente a borrar es un coma y en ese caso borro el numero y la coma
+        ' In here we check for the comma, if we encounter a comma we delete the number and the comma
         If txtBoxResult.Text.Length > 1 Then
-            Dim esComa As Char
+            Dim isComma As Char
 
-            esComa = txtBoxResult.Text.Chars(txtBoxResult.Text.Length - 2)
+            isComma = txtBoxResult.Text.Chars(txtBoxResult.Text.Length - 2)
 
-            If esComa = "," Then
+            If isComma = "," Then
                 txtBoxResult.Text = txtBoxResult.Text.Substring(0, txtBoxResult.Text.Length - 2)
             Else
                 txtBoxResult.Text = txtBoxResult.Text.Substring(0, txtBoxResult.Text.Length - 1)
@@ -305,8 +299,6 @@
 
         hidePowY()
 
-        ' Si el textBox no tiene solo un numero 0 y si ademas no tiene un signo negativa le pongo el signo negativo al principio del string
-        ' Si el textBox ya tiene un signo negativo lo quito al pulsar el boton
         If txtBoxResult.Text <> numberZero AndAlso
             Not txtBoxResult.Text.Contains("-") Then
 
@@ -443,7 +435,6 @@
 
     Private Sub Form1_KeyPress(sender As Object, e As KeyPressEventArgs) Handles MyBase.KeyPress
 
-        ' Para poder introducir numeros y operaciones por el teclado
         If normalMode Then
             Select Case e.KeyChar
                 Case "1"
